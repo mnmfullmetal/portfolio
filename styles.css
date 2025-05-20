@@ -1,12 +1,12 @@
 .topnav {
-    background-color: #03020a;
-    position: fixed;
+    position:fixed;
     z-index: 5;
     top: 0;
     display: flex;
     width: 100%;
     transition: 0.4s;
-
+    background-color:#0b001f;
+    font-size: 2.5rem;
 }
 
 .topnav a {
@@ -29,6 +29,7 @@
     border-radius: 50%;
     border-style: ridge;
     border-color: #0b0412;
+    align-self: center;
 }
 
 .social-tab {
@@ -50,7 +51,7 @@
 }
 
 
-.topnav a:hover {
+.topnav a:hover:not(.icon) {
     background-color: #dddddd;
     color: black;
 }
@@ -78,6 +79,7 @@
     padding: 0.8rem 1rem;
     background-color: inherit;
     text-decoration: none;
+    height: 100%;
 }
 
 .dropdown-content {
@@ -94,8 +96,9 @@
     color: black;
     padding: 0.7rem 1rem;
     text-decoration: none;
-    display: block;
+    display: flex;
     text-align: left;
+    justify-content: center;
 }
 
 .dropdown:hover .dropdown-content {
@@ -108,7 +111,7 @@
    
     .topnav > .social-tab {
         display: flex;       
-        align-items: center; 
+        justify-content: center; 
     }
 
     .topnav > .social-tab p { 
@@ -129,6 +132,7 @@
     .topnav.responsive {
         flex-direction: column;
         align-items: flex-start;
+       
     }
 
     .topnav.responsive a.icon { 
@@ -142,7 +146,7 @@
     .topnav.responsive > .dropdown {
         display: block;
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     .topnav.responsive > .social-tab {
@@ -153,8 +157,7 @@
     .topnav.responsive .dropdown .dropbutton {
         display: flex;
         width: 100%;
-        justify-content: flex-start;
-        text-align: left;
+        justify-content: center;
         padding: 0.8rem 1rem;
         box-sizing: border-box;
         background-color: inherit;
@@ -171,15 +174,22 @@
         position: static;
         box-shadow: none;
         width: 100%;
+
     }
 
     .topnav.responsive .dropdown:hover .dropdown-content {
         display: block;
+        text-align: center;
+        align-content: center;
     }
 
     .content-container{
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+    }
+
+    #home-content-left{
+        text-align: center;
     }
 }
 
@@ -189,7 +199,7 @@ main {
     border-style: ridge;
     border-color: #521363;
     border-width: 0.5vw;
-    background-image: radial-gradient(ellipse at top, #060412, #0b0412, #070F1C);
+    background-color: #04000a;
     animation: borderBreath 20s linear infinite;
     height: 250vh;
     width: auto;
@@ -246,34 +256,43 @@ footer {
 #home-content-left {
     width: auto;
     padding: 5%;
+   
     
 }
 
+#home-content-left h1 {
+    font-size:500%;
+}
+
+
 #home-content-right {
- width: 60vw;
+    font-size: 100%;
+ width: 100%;
  padding: 5%;
+ margin-top: 5vh;
 
 }
 
 
 #home-content-buttons {
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column;  
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #home-content-buttons button {
-    width: auto;
+    width: 100%;
     padding: 2px;
-    margin-top: 0.5vh; 
-    margin-bottom: 0.5vh;
+    margin-top: 1vh; 
+    margin-bottom: 1vh;
     
 }
 
 #home-social-icons{
    display: flex;
-   justify-content:space-around;
-   
+   justify-content:space-between;   
+   width: 100%;
 }
 
 .fa {
@@ -303,6 +322,8 @@ footer {
     background-color: #1b1542;
 }
 
-
+.fa-bars{
+    background-color: #1b1542;
+}
 
 
