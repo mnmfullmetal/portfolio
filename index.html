@@ -13,10 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <link href="styles.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="MGLogo.jpeg" />
     <script src="portfolio.js"></script>
     <meta charset="UTF-8" />
@@ -28,10 +25,10 @@
       <div class="topnav" id="myTopnav">
         <img src="MGLogo.jpeg" alt="My logo" class="logo" />
         <div class="social-tab">
-          <a href="https://github.com/mnmfullmetal" class="fa fa-github"></a>
+          <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
           <a
             href="https://linkedin.com/in/mylesgillard"
-            class="fa fa-linkedin"
+            class="fa-brands fa-linkedin"
           ></a>
           <a href="contact.html" class="fa fa-envelope"></a>
           <p>mnm.fullmetal@gmail.com</p>
@@ -63,20 +60,22 @@
         <div id="home-content-left">
           <div>
             <h1>Myles Gillard</h1>
-            <p style="text-decoration: underline;">Video Game & Software Developer</p>
+            <p>Video Game & Software Developer</p>
           </div>
+          <hr>
           <div id="home-content-buttons">
             <button>About</button>
             <button>Projects</button>
             <button>Resume</button>
           </div>
           <div id="home-social-icons">
-            <a href="https://github.com/mnmfullmetal" class="fa fa-github"></a>
+            <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
             <a
               href="https://linkedin.com/in/mylesgillard"
-              class="fa fa-linkedin"
+              class="fa-brands fa-linkedin"
             ></a>
             <a href="contact" class="fa fa-envelope"></a>
+            <a href="contact" class="fa-brands fa-x-twitter"></a>
           </div>
         </div>
         <div id="home-content-right">
@@ -108,6 +107,19 @@
             nostrum mollitia?
           </p>
         </div>
+      </div>
+       <div class='contact-container'>
+        <form action="https://api.web3forms.com/submit" method="POST" class='contactform'>
+           <div class='contact-title'>
+             <h2>Get in touch</h2>
+             <hr>
+           </div>
+            <input type="hidden" name="access_key" value="67f6359d-6168-4f48-bec0-fccc42284455">
+            <input type='text' name='name' placeholder="Your Name" class='contact-inputs' required>
+            <input type='email' name='email' placeholder="Your Email" class='contact-inputs' required>
+            <textarea name='message' placeholder="Your Message" class='contact-inputs' id="contact_textarea" required></textarea>
+            <button type='submit'>Submit</button>
+        </form>
       </div>
     </main>
     <footer><div>Myles Gillard 2025</div></footer>
