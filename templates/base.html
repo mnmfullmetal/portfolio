@@ -34,9 +34,9 @@
           <a href="contact.html" class="fa fa-envelope"></a>
           <p>MylesG.dev@gmail.com</p>
         </div>
-        <a class="active" href="index.html">Home</a>
+        <a {% if current_page == 'index' %}class="active"{% endif %} href="index.html">Home</a>
         <div class="dropdown">
-          <a  href="projects.html" class="dropbutton">Projects</a>
+          <a {% if current_page == 'projects' %}class="active"{% endif %} href="projects.html" class="dropbutton">Projects</a>
           <div class="dropdown-content">
             <a href="project1">Unity Asset Organiser</a>
             <a href="project2">MechOccult</a>
@@ -44,9 +44,9 @@
             <a href="project4">Velocity VR</a>
           </div>
         </div>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a {% if current_page == 'about' %}class="active"{% endif %} href="about.html">About</a>
+        <a {% if current_page == 'gallery' %}class="active"{% endif %} href="gallery.html">Gallery</a>
+        <a {% if current_page == 'contact' %}class="active"{% endif %} href="contact.html">Contact</a>
         <a
           href="javascript:void(0);"
           class="icon"
@@ -57,7 +57,6 @@
     </header>
     <main>
     {% block content %}
-        {# Default content or instructions if a child template doesn't fill this in #}
     {% endblock %}
 </main>
     </body>
