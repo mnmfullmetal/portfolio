@@ -1,0 +1,388 @@
+hr{
+    color: #f2f2f2;
+}
+.topnav {
+    position:fixed;
+    z-index: 5;
+    top: 0;
+    display: flex;
+    width: 100%;
+    transition: 0.4s;
+    background-color:#0b001f;
+    font-size: 2.5rem;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.topnav .logo {
+
+    margin-left: 1vw;
+    color: #f2f2f2;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border-style: ridge;
+    border-color: #0b0412;
+    align-self: center;
+}
+
+.social-tab {
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.social-tab p {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #f2f2f2;
+}
+
+.social-tab a {
+    margin-left: 10px;
+}
+
+
+.topnav a:hover:not(.icon) {
+    background-color: #dddddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #c245eb;
+    color: #f2f2f2;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown .dropbutton {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    padding: 0.8rem 1rem;
+    background-color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    width: inherit;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 1200px) {
+   
+    .topnav > .social-tab {
+        display: flex;       
+        justify-content: center; 
+    }
+
+    .topnav > .social-tab p { 
+        display: none;
+    }
+
+    .topnav > a:not(.icon),
+    .topnav > .dropdown {
+        display: none;
+    }
+
+    .topnav > a.icon {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .topnav.responsive {
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+
+    .topnav.responsive a.icon { 
+        position: absolute;
+        right: 0;
+        top: 0;   
+        margin-left: 0;
+    }
+
+    .topnav.responsive > a:not(.icon),
+    .topnav.responsive > .dropdown {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .topnav.responsive > .social-tab {
+        display: none;
+    }
+
+   
+    .topnav.responsive .dropdown .dropbutton {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem;
+        box-sizing: border-box;
+        background-color: inherit;
+        color: #f2f2f2;
+    }
+
+    .topnav.responsive > .logo {
+        display: block;
+        margin-bottom: 10px; 
+    }
+
+    .topnav.responsive .dropdown-content {
+        display: none;
+        position: static;
+        box-shadow: none;
+        width: 100%;
+
+    }
+
+    .topnav.responsive .dropdown:hover .dropdown-content {
+        display: block;
+        text-align: center;
+        align-content: center;
+    }
+
+    .content-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #home-content-left{
+        text-align: center;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+main {
+  
+    padding: 8vh 4vw;
+    border-style: ridge;
+    border-color: #521363;
+    border-width: 0.5vw;
+    background-color: #04000a;
+    animation: borderBreath 20s linear infinite;
+    height: 250vh;
+    width: auto;
+        
+}
+
+@keyframes borderBreath {
+    0% {
+        border-color: #521363;
+    }
+
+    50% {
+        border-color: #21b053
+    }
+
+    75% {
+        border-color: #7c21b0;
+    }
+
+    99% {
+        border-color: #521363;
+    }
+
+    100% {
+        border-color: #521363;
+    }
+}
+
+
+footer {
+    background-color: #020104;
+    height: auto;
+    text-align: center;
+    padding: 1vw;
+    color: #f2f2f2;
+
+}
+
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    color: #f2f2f2;
+    height: auto;
+    
+}
+
+#home-content-left {
+    width: auto;
+    padding: 5%;    
+}
+
+#home-content-left h1 {
+    font-size:500%;
+}
+
+
+#home-content-right {
+    font-size: 100%;
+ width: 100%;
+ padding: 5%;
+ margin-top: 5vh;
+
+}
+
+
+#home-content-buttons {
+    display: flex;
+    flex-direction: column;  
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#home-content-buttons button {
+    width: 100%;
+    padding: 2px;
+    margin-top: 1vh; 
+    margin-bottom: 1vh;
+    
+}
+
+#home-social-icons{
+   display: flex;
+   justify-content:space-between;   
+   width: 100%;
+}
+
+.fa {
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #a3d3ff;
+}
+
+.fa-brands{
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #a3d3ff;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: #ff00f2;
+}
+
+.fa-brands:hover {
+    opacity: 0.7;
+    color: #ff00f2;
+}
+
+.fa-x-twitter {
+    background-color: #1b1542;
+}
+
+
+.fa-github {
+    background-color: #1b1542;
+}
+
+.fa-linkedin {
+    background-color: #1b1542;
+}
+
+.fa-envelope {
+    background-color: #1b1542;
+}
+
+.fa-bars{
+    background-color: #1b1542;
+}
+
+.contact-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items:center;
+    justify-content:end;
+    flex-direction: row;
+
+}
+
+.contact-title h2 {
+    font-size: 4rem;
+    color: #f2f2f2;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1.5vh;
+    align-items: center;
+    padding: 5% 10% 5% 5%;
+}
+
+.contact-inputs {
+    height: auto;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#contact_textarea {
+    height: 20vh;
+    width: 75%;
+}
+
+
