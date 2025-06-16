@@ -2,6 +2,11 @@ hr{
     color: #f2f2f2;
 }
 
+h1{
+    text-align: center;
+    color: #f2f2f2;
+}
+
 .topnav {
     position:fixed;
     z-index: 5;
@@ -250,6 +255,7 @@ footer {
 
 .content-left h1 {
     font-size:500%;
+    text-align: left;
 }
 
 .content-right {
@@ -347,8 +353,37 @@ footer {
 
 
 #projects-content-container {
-    background-color: rgba(11, 0, 31, 0.706);
+    background-color: rgba(11, 0, 31, 0.400);
     border: solid;
     border-color: #1d023e;
+    margin-top: 5vh;
+}
+
+#project-content-buttons{
+    display: flex;
+    flex-direction: column;  
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+}
+
+#project-content-buttons button{
+    padding: 2px;
+    margin-top: 1vh; 
+    margin-bottom: 1vh;
+    align-items: center;
+}
+
+#project-content-left{
+    width: 35vw;
+    padding: 5%;   
+}
+
+#project-content-right{
+    width: 50vw;
+    margin: auto;
+}
+
+#projects-header{
     margin-top: 5vh;
 }

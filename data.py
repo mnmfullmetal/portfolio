@@ -9,7 +9,7 @@ PROJECTS = [
     },
 
     {
-        'name': "MechOccult", 
+        'name': "Mech-Occult", 
         'description': "blah blah blah blah",
         'image': "image here",
         'hasDemo': True
@@ -28,7 +28,6 @@ PROJECTS = [
         'description': "blah blah blah blah",
         'image': "image here",
         'hasDemo': False
-
     }
 
 ]
