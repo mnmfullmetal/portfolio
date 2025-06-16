@@ -1,6 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 import os
 import shutil
+import data
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 env = Environment(loader = FileSystemLoader(template_dir))
@@ -20,10 +21,15 @@ for template_filename in os.listdir(template_dir):
     if template_filename.endswith('.html'):
         page_name = os.path.splitext(template_filename)[0]
         template = env.get_template(template_filename)
-        rendered_html = template.render(current_page=page_name)
+
+        context_data = {"current_page": page_name}
+
+        if page_name == 'projects':
+            context_data['projects'] = data.PROJECTS
+
+        rendered_html = template.render(**context_data)
 
         output_file_path = os.path.join(output_dir, template_filename)
-
         with open(output_file_path, 'w', encoding='utf-8') as f:
             f.write(rendered_html)
         print(f"Generated: {output_file_path}")

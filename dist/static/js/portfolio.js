@@ -7,7 +7,7 @@ function toggleResponsiveness() {
     }
   }
 
-  window.onscroll = function() {scrollFunction()};
+window.onscroll = () => {scrollFunction()};
 
 function scrollFunction() {
   var navbar = document.getElementById("myTopnav")
@@ -15,7 +15,6 @@ function scrollFunction() {
     navbar.style.fontSize = "1rem";
     navbar.style.backgroundColor = "#0a0216"
     navbar.style.opacity = "95%"
-
   } else {
     navbar.style.fontSize = "2.5rem";
     navbar.style.backgroundColor = "#0b001f";
