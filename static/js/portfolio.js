@@ -1,3 +1,5 @@
+
+
 function toggleResponsiveness() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -10,7 +12,7 @@ function toggleResponsiveness() {
 window.onscroll = () => {scrollFunction()};
 
 function scrollFunction() {
-  var navbar = document.getElementById("myTopnav")
+  const navbar = document.getElementById("myTopnav");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     navbar.style.fontSize = "1rem";
     navbar.style.backgroundColor = "#0a0216"

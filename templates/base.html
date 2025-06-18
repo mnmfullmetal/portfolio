@@ -18,7 +18,7 @@
     <script src="static/js/portfolio.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}My Portfolio - Default{% endblock %}</title>
+    <title>{% block title %}Myles Gillard{% endblock %}</title>
   </head>
   <body>
      <header>
@@ -32,14 +32,13 @@
           ></a>
             <a href="contact.html" class="fa-brands fa-x-twitter"></a>
           <a href="contact.html" class="fa fa-envelope"></a>
-          <p>MylesG.dev@gmail.com</p>
         </div>
         <a {% if current_page == 'index' %}class="active"{% endif %} href="index.html">Home</a>
         <div class="dropdown">
           <a  {% if current_page == 'projects' %}class="active"{% endif %} href="projects.html" class="dropbutton">Projects</a>
           <div class="dropdown-content">
             <a href="project1">Unity Asset Organiser</a>
-            <a href="project2">MechOccult</a>
+            <a href="project2">Mech-Occult</a>
             <a href="project3">Mystic Matches</a>
             <a href="project4">Velocity VR</a>
           </div>

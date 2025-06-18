@@ -6,7 +6,7 @@
       <div class="content-container" id="home-content-container">
         <div class="content-left">
           <div>
-            <h1>Myles Gillard</h1>
+            <h1>Myles Gillard </h1>
             <p>Video Game & Software Developer</p>
           </div>
           <hr>
@@ -55,7 +55,35 @@
           </p>
         </div>
       </div>
-       <div class='contact-container'>
+
+      <div id="projects-header">
+        
+<h1>My Projects</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro nisi, velit modi deleniti aliquid accusantium, corrupti odit labore voluptate reiciendis obcaecati aspernatur numquam officiis ut delectus eligendi non ipsam.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deleniti nemo voluptas. Ratione asperiores natus, veniam illum ipsam possimus? Mollitia earum laboriosam qui voluptatibus suscipit reiciendis assumenda velit ut consequatur!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, ipsa. Nulla assumenda culpa aspernatur alias quia aliquid placeat exercitationem cupiditate, nisi deserunt, commodi ipsum fuga quo dolores sit, deleniti ipsa. Perspiciatis sunt officiis quam nisi labore? Reprehenderit delectus reiciendis eius a cupiditate molestiae earum quae repudiandae mollitia, doloribus repellendus aspernatur totam quidem atque, enim voluptas, odio necessitatibus consequatur. Est sit non hic consequatur quidem nulla laboriosam, rerum suscipit voluptate necessitatibus debitis eaque commodi, amet perferendis itaque? Maxime magnam maiores nam dolor! Minima illo inventore voluptates nulla! Accusamus, cum sequi, quidem provident assumenda consequuntur neque, est harum ut voluptas obcaecati quibusdam.</p>
+</div>
+{% for project in projects %}
+      <div class="content-container" id="projects-content-container">
+        <div class="content-left" id="project-content-left">
+          <div>
+         <h1>{{project.name}}</h1>
+          </div>
+         <hr>
+          <div id="project-content-buttons">
+            <button>View on Github</button>
+            <button>View Project</button>
+            {% if project.hasDemo %}
+            <button>Play Demo</button>
+            {% endif %}
+          </div>
+        </div>
+        <div class="content-right" id="project-content-right">
+          {{project.description}}
+        </div>
+      </div>
+        {% endfor %}
+        <div class='contact-container'>
         <form action="https://api.web3forms.com/submit" method="POST" class='contactform'>
            <div class='contact-title'>
              <h2>Get in touch</h2>
