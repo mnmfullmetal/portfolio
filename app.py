@@ -3,6 +3,7 @@ import os
 import shutil
 import data
 from livereload import Server  
+import time
 
 def build():
     print("Building static files...")
@@ -24,6 +25,8 @@ def build():
         shutil.rmtree(static_dest_dir)
     shutil.copytree(static_src_dir, static_dest_dir)
     
+    cache_buster = int(time.time())
+
     # Render templates
     for template_filename in os.listdir(template_dir):
         if template_filename.endswith('.html'):
@@ -31,8 +34,15 @@ def build():
             template = env.get_template(template_filename)
             
             # Prepare context data
-            context_data = {"current_page": page_name}
+            context_data = {
+                "current_page": page_name,
+                "cache_buster": cache_buster
+            }
             if page_name == 'index':
+                context_data['projects'] = data.LATEST_PROJECTS
+                
+
+            if page_name == 'projects':
                 context_data['projects'] = data.PROJECTS
             
             # Render and write file
@@ -41,7 +51,7 @@ def build():
             with open(output_file_path, 'w', encoding='utf-8') as f:
                 f.write(rendered_html)
                 
-    print("Build complete.")
+    print(f"Build complete with cache key: {cache_buster}")
 
 if __name__ == "__main__":
 

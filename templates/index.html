@@ -8,39 +8,47 @@
    <div id="split-nav">
 
       <div id="split-nav-text">
-        <h1>Myles Gillard</h1>
+        <h1 id="split-nav-title">Myles Gillard</h1>
         <h4>Video Game & Software Developer</h4>
         <hr>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum velit non reprehenderit minima quasi esse accusamus laudantium, natus amet quibusdam?</p>
+      </div>
+        <div id="split-nav-socials">
+        
       </div>
       <div id="split-nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
       </div>
-
     </div>
 
     <div id="split-nav-content">
 
-         <section id="about">
-                <h2>About Me</h2>
+         <section id="about" class="scroll-section">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum suscipit maxime distinctio aut temporibus voluptatum cum minus velit labore quisquam assumenda expedita praesentium quae eveniet nulla sapiente cupiditate dignissimos, voluptatem quidem aliquid fugiat harum perspiciatis?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem inventore ipsa aliquid sapiente error suscipit, quibusdam magnam dolorum corporis.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic at, nihil reprehenderit tenetur mollitia officia laborum? Sapiente, quae dolorum!</p>           
          </section>
 
-            <section id="projects">
-                <h2>Projects</h2>
+            <section id="projects" class="scroll-section">
                 {% for project in projects %}
-                <div id="projects-content-container">
-                  <h1>{{project.name}}</h1>
+                <div id="project-container">
+                  <div id="project-details">
+                    <h2>{{project.name}}</h2>
                   <p>{{project.description}}</p>
+                  {% for tool in project.tools %}
+                  {{tool}},
+                  {% endfor %}
+                  </div>
+                  <div id="project-image-container">
+                    <img src="static/images/placeholder-image.jpg" alt="IMG HERE">
+                  </div>
                 </div>
                 {% endfor %}
             </section>
 
-            <section id="resume">
+            <section id="resume" class="scroll-section">
                 <h2>Resume</h2>
                 <p>You could embed a PDF of your resume here or list out your work experience and education in detail.</p>
             </section>
