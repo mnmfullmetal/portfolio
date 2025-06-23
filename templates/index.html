@@ -30,10 +30,10 @@
                 <p>My core technical expertise lies in C# and the .NET framework, complemented by extensive experience in a variety of languages and technologies essential for modern development:</p>
                 <ul>
                   <li><span id="highlighted-word"><strong>Primary Languages:</strong></span> C#, C/C++</li>
-                  <li><span id="highlighted-word"> <strong>Web & Scripting:</strong></span> Python, JavaScript, HTML, CSS, Jinja2</li>
-                  <li><span id="highlighted-word"> <strong>Engines & Frameworks:</strong></span> .NET, Django, Flask, Unity, Unreal</li>
-                  <li><span id="highlighted-word"> <strong>Tools:</strong></span> Git, Perforce, Maya, Blender, Photoshop, GIMP, Krita </li>
-                  <li><span  id="highlighted-word"> <strong>Platforms:</strong></span> PC, Mobile, Web, VR/AR</li>
+                  <li><span id="highlighted-word"><strong>Web & Scripting:</strong></span> Python, JavaScript, HTML, CSS, Jinja2</li>
+                  <li><span id="highlighted-word"><strong>Engines & Frameworks:</strong></span> .NET, Django, Flask, Unity, Unreal</li>
+                  <li><span id="highlighted-word"><strong>Tools:</strong></span> Git, Perforce, Maya, Blender, Photoshop, GIMP, Krita </li>
+                  <li><span id="highlighted-word"><strong>Platforms:</strong></span> PC, Mobile, Web, VR/AR</li>
                 </ul>
                 <p>Throughout my career, I've thrived on the unique challenges each project presents. This has allowed me to continuously refine my skills, adapt to new pipelines, and excel as a collaborative team member. I am driven by the challenge of creating memorable and engaging experiences for users.</p>
                 <p>I'm always excited to connect and build the next great thing. Follow my journey and see my latest work on my socials!</p>           
@@ -43,26 +43,22 @@
                 {% for project in projects %}
                 <div id="project-container">
                   <div id="project-details">
-                    <h2>{{project.name}}</h2>
+                  <h2>{{project.name}}</h2>
                   <p>{{project.description}}</p>
                   {% for tool in project.tools %}
-                  {{tool}},
+                  <span id="project-tool">{{tool}}</span>
                   {% endfor %}
                   </div>
                   <div id="project-image-container">
-                    <img src="static/images/placeholder-image.jpg" alt="IMG HERE">
+                    <img src="static/images/{{ project.image }}" alt="IMG HERE">
                   </div>
                 </div>
                 {% endfor %}
             </section>
-
             <section id="resume" class="scroll-section">
                 <h2>Resume</h2>
-                <p>You could embed a PDF of your resume here or list out your work experience and education in detail.</p>
             </section>
     </div>
-
-
 </div>
      
 {% endblock %}
