@@ -3,7 +3,7 @@
 PROJECTS = [
     {
         'name': "Unity Asset Organiser", 
-        'description': "blah blah blah blah",
+        'description': "A survival horror VR game designed for the HTC Vive / PC",
         'image': "image here",
         'hasDemo': False,
         'Demo': None,
@@ -31,7 +31,7 @@ PROJECTS = [
 
     {
         'name': "Velocity VR", 
-        'description': "blah blah blah blah",
+        'description': "A survival horror VR game designed for the HTC Vive / PC",
         'image': "image here",
         'hasDemo': False,
         'Demo': None,
@@ -53,7 +53,7 @@ PROJECTS = [
 LATEST_PROJECTS = [
      {
         'name': "Unity Asset Organiser", 
-        'description': "blah blah blah blah",
+        'description': "A custom Unity editor tool designed to enforce project organisational standards and streamline development by eliminating tedious manual asset sorting.",
         'image': "image here",
         'hasDemo': False,
         'Demo': None,

@@ -2,7 +2,6 @@
 let lastScrollTop = 0;
 
 
-
 function toggleResponsiveness() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -42,31 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('#split-nav-links a');
     const sections = document.querySelectorAll('.scroll-section');
 
-    if (navLinks.length === 0 || sections.length === 0) {
+      if (navLinks.length === 0 || sections.length === 0) {
+        console.error('CRITICAL ERROR: Could not find nav links or scroll sections. Please check your HTML for a <div id="split-nav-links"> and <section class="scroll-section"> tags.');
+        return; 
+    }
+
+ const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -60% 0px', 
+    threshold: 0.1 
+};
+
+    const observerCallback = (entries, observer) => {
+    const lastVisibleEntry = entries.find(entry => entry.isIntersecting);
+
+    if (!lastVisibleEntry) {
         return;
     }
 
-    const observerOptions = {
-        root: null, 
-        rootMargin: '-20% 0px -80% 0px',
-        threshold: 0.4
-    };
+    const activeSectionId = lastVisibleEntry.target.getAttribute('id');
 
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
+    const activeLink = document.querySelector(`#split-nav-links a[href="#${activeSectionId}"]`);
 
-                const sectionId = entry.target.getAttribute('id');
-                const activeLink = document.querySelector(`#split-nav-links a[href="#${sectionId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-            }
-        });
-    };
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+};
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
