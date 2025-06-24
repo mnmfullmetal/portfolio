@@ -17,8 +17,8 @@ function scrollFunction() {
   const header = document.getElementById("main-header");
   let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (currentScrollTop < 2) {
-    header.style.opacity = '0.95';
+  if (currentScrollTop < 20) {
+    header.style.opacity = '1';
   } else {
     header.style.opacity = '0.70'; 
   }
@@ -84,4 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         });
     });
+
+
+
+    document.addEventListener('mousemove', (e) => {
+    // Update the CSS variables on the body element
+    // e.clientX and e.clientY give us the mouse position relative to the viewport
+    document.body.style.setProperty('--x', `${e.clientX}px`);
+    document.body.style.setProperty('--y', `${e.clientY}px`);
 });
+
+});
+
+

@@ -16,7 +16,7 @@ PROJECTS = [
         'image': "mech-occult.jpg",
         'hasDemo': True,
         'Demo': None,
-        'tools': ["C#", "Blender 4.0", "GIMP 2.0", "Krita", "Unity 2022"]
+        'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
 
     },
 
@@ -26,7 +26,7 @@ PROJECTS = [
         'image': "mystic-matches.jpg",
         'hasDemo': True,
         'Demo': None,
-        'tools': ["C#", "Blender 4.0", "GIMP 2.0", "Krita", "Unity 2022"]
+        'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
     },
 
     {
@@ -66,7 +66,7 @@ LATEST_PROJECTS = [
         'image': "mech-occult.jpg",
         'hasDemo': True,
         'Demo': None,
-        'tools': ["C#", "Blender 4.0", "GIMP 2.0", "Krita","Unity 2022"]
+        'tools': ["C#", "Blender", "GIMP", "Krita","Unity 2022"]
     },
 
     {
@@ -75,7 +75,7 @@ LATEST_PROJECTS = [
         'image': "mystic-matches.jpg",
         'hasDemo': True,
         'Demo': None,
-        'tools': ["C#", "Blender 4.0", "GIMP 2.0", "Krita", "Unity 2022"]
+        'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
     },
     
     {

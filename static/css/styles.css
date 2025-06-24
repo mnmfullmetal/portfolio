@@ -349,6 +349,9 @@ header {
  width: 100%;
 }
 
+#project-tool{
+    color: #61c2a3;
+}
 
 
 
@@ -439,4 +442,24 @@ header {
         width: 100%;      
         padding: 2rem;    
     }
+}
+
+body::before {
+    content: '';
+    /* Position the glow relative to the viewport */
+    position: fixed;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+
+    /* Making the glow a bit larger for a full-page effect */
+    width: 60rem;
+    height: 60rem;
+    background: radial-gradient(circle, #2501694a 0%, rgba(209, 38, 189, 0) 70%);
+    border-radius: 50%;
+    
+    /* Place the glow behind ALL other content */
+
+    pointer-events: none;
+    /* The transition is removed from the glow itself to make it instantaneous */
 }
