@@ -1,7 +1,6 @@
 
 let lastScrollTop = 0;
 
-
 function toggleResponsiveness() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -38,61 +37,116 @@ function scrollFunction() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+";
+
+    const scramble = (element) => {
+        const originalText = element.dataset.value;
+        if (!originalText) {
+            return;
+        }
+
+        let iteration = 0;
+        clearInterval(element.scrambleInterval); 
+
+        element.scrambleInterval = setInterval(() => {
+            element.innerText = originalText
+                .split("")
+                .map((letter, index) => {
+                    if (index < iteration) {
+                        return originalText[index];
+                    }
+                    return letters[Math.floor(Math.random() * letters.length)];
+                })
+                .join("");
+
+            if (iteration >= originalText.length) {
+                clearInterval(element.scrambleInterval);
+            }
+
+            iteration += 1/3;
+        }, 30);
+    };
+    
+    const resetText = (element) => {
+        clearInterval(element.scrambleInterval);
+        if (element.dataset.value) {
+            element.innerText = element.dataset.value;
+        }
+    };
+
+
+
     const navLinks = document.querySelectorAll('#split-nav-links a');
     const sections = document.querySelectorAll('.scroll-section');
 
-      if (navLinks.length === 0 || sections.length === 0) {
-        console.error('CRITICAL ERROR: Could not find nav links or scroll sections. Please check your HTML for a <div id="split-nav-links"> and <section class="scroll-section"> tags.');
-        return; 
+    if (navLinks.length > 0 && sections.length > 0) {
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0.1
+        };
+
+        const observerCallback = (entries) => {
+            const lastVisibleEntry = entries.find(entry => entry.isIntersecting);
+            if (!lastVisibleEntry) return;
+
+            const activeSectionId = lastVisibleEntry.target.getAttribute('id');
+            const activeLink = document.querySelector(`#split-nav-links a[href="#${activeSectionId}"]`);
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            if (activeLink) {
+                activeLink.classList.add('active');
+                scramble(activeLink); 
+            }
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        sections.forEach(section => observer.observe(section));
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(lnk => {
+                    lnk.classList.remove('active');
+                    resetText(lnk); 
+                });
+                link.classList.add('active');
+                scramble(link); 
+            });
+
+            link.addEventListener('mouseover', () => scramble(link));
+            link.addEventListener('mouseleave', () => {
+                if (!link.classList.contains('active')) {
+                    resetText(link); 
+                }
+            });
+        });
     }
 
- const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -60% 0px', 
-    threshold: 0.1 
-};
 
-    const observerCallback = (entries, observer) => {
-    const lastVisibleEntry = entries.find(entry => entry.isIntersecting);
 
-    if (!lastVisibleEntry) {
-        return;
-    }
+    const projectContainers = document.querySelectorAll('#project-container');
+    projectContainers.forEach(container => {
+        const title = container.querySelector('#project-title');
+        if (!title) return;
 
-    const activeSectionId = lastVisibleEntry.target.getAttribute('id');
+        container.addEventListener('mouseover', () => {
+            scramble(title); 
+        });
 
-    const activeLink = document.querySelector(`#split-nav-links a[href="#${activeSectionId}"]`);
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-    });
-
-    if (activeLink) {
-        activeLink.classList.add('active');
-    }
-};
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.forEach(lnk => lnk.classList.remove('active'));
-            link.classList.add('active');
+        container.addEventListener('mouseleave', () => {
+            resetText(title); 
         });
     });
 
-
-
     document.addEventListener('mousemove', (e) => {
-    // Update the CSS variables on the body element
-    // e.clientX and e.clientY give us the mouse position relative to the viewport
-    document.body.style.setProperty('--x', `${e.clientX}px`);
-    document.body.style.setProperty('--y', `${e.clientY}px`);
-});
+        document.body.style.setProperty('--x', `${e.clientX}px`);
+        document.body.style.setProperty('--y', `${e.clientY}px`);
+    });
 
 });
 

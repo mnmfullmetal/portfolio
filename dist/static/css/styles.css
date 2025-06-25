@@ -7,17 +7,17 @@ html {
 }
 
 hr{
-        color: #d126bd;
+        color: #ff00e1;
 
 }
 
 
 footer {
-    background-color:#1b1542;
+    background-color:#0b001f;
     height: auto;
     text-align: center;
     padding: 1vw;
-    color: #61c2a3;
+    color: #36e5ae;
 }
 
 main {
@@ -82,8 +82,8 @@ header {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    border-style: ridge;
-    border-color: #0b0412;
+    border-style: solid;
+    border-color: #581998;
     align-self: center;
 }
 
@@ -116,7 +116,7 @@ header {
 
 
 #highlighted-word{
-    color: #61c2a3;
+    color: #36e5ae;
 }
 
 #split-nav-container {
@@ -135,7 +135,6 @@ header {
 
 #split-nav-content {
     padding: 4rem 5rem 5rem 10rem;
-
     color: #f2f2f2;
 }
 
@@ -156,7 +155,6 @@ header {
 }
 
 
-
 #split-nav-text {
     color: #f2f2f2;
 }
@@ -169,7 +167,7 @@ header {
 #split-nav-links {
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
+    margin-top: 15vh;
     width: 50%;
 }
 
@@ -199,86 +197,21 @@ header {
     margin-left: 5px;
 }
 
-
-/* Social Icons */
-
-.fa,
-.fa-brands {
-    padding: 1rem;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    color: #61c2a3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#split-nav-socials{
+    margin-top: 20vh;
 }
 
-.fa:hover,
-.fa-brands:hover {
-    opacity: 0.7;
-    color: #ff00f2;
+#split-nav-socials a{
+    margin-left: 10px;
 }
 
-.fa-x-twitter,
-.fa-github,
-.fa-linkedin,
-.fa-envelope,
-.fa-bars {
-    background-color: #1b1542;
+.about{
+    padding-left: 2rem;
 }
 
 
 
 
-
-
-.content-container{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    color: #f2f2f2;
-    height: auto;  
-}
-
-.content-left {
-    width: auto;
-    padding: 5%;    
-}
-
-.content-left h1 {
-    font-size:500%;
-    text-align: left;
-}
-
-.content-right {
-    font-size: 100%;
-    width: 100%;
-    padding: 5%;
-    margin-top: 5vh;
-}
-
-#home-content-buttons {
-    display: flex;
-    flex-direction: column;  
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#home-content-buttons button {
-    width: 100%;
-    padding: 2px;
-    margin-top: 1vh; 
-    margin-bottom: 1vh;
-}
-
-#home-social-icons{
-   display: flex;
-   justify-content:space-between;   
-   width: 100%;
-}
 
 
 .contact-container {
@@ -321,14 +254,32 @@ header {
 
 
 #project-container {
-    background-color:#1b1542;
-    border: solid;
-    border-color: #1d023e;
     margin-top: 5vh;
     display: flex;
     flex-direction: row;
     width: 100%;
     
+
+
+}
+
+#project-container:hover{
+    background-color:#1a0e36;
+    cursor: pointer;    
+     border-style: solid;
+    border-color: #36e5ae;
+    border-width: 2px;
+    border-radius: 8px; /* Add rounded corners */
+     transform: translateY(-5px); /* The subtle lift effect */
+    /* A soft glow that works well against the dark purple background */
+    box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), /* A wider, soft lavender glow */
+                0 0 8px rgba(220, 200, 255, 0.2);   /* A slightly brighter, tighter inner glow */
+}
+
+
+#project-container:hover #project-title{
+    color: #d126bd;
+    transition: color 0.3s ease-in-out;
 }
 
 
@@ -350,7 +301,15 @@ header {
 }
 
 #project-tool{
-    color: #61c2a3;
+    color: #36e5ae;
+    padding: 0.5rem;
+  display: inline-block;
+  margin: 3px 3px 3px 0; 
+
+}
+
+#about{
+    padding-left: 2rem;
 }
 
 
@@ -359,7 +318,7 @@ header {
 
 /* Media Queries and Animations */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 950px) {
    
     .topnav > .social-tab {
         display: flex;       
@@ -433,7 +392,7 @@ header {
     }
 
     
-    #split-nav-links {
+    #split-nav-links, #split-nav-socials {
        display: none;
     }
 
@@ -446,20 +405,44 @@ header {
 
 body::before {
     content: '';
-    /* Position the glow relative to the viewport */
     position: fixed;
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
-
-    /* Making the glow a bit larger for a full-page effect */
     width: 60rem;
     height: 60rem;
-    background: radial-gradient(circle, #2501694a 0%, rgba(209, 38, 189, 0) 70%);
+    background: radial-gradient(circle, #2b01794a 0%, rgba(209, 38, 189, 0) 70%);
     border-radius: 50%;
-    
-    /* Place the glow behind ALL other content */
-
     pointer-events: none;
-    /* The transition is removed from the glow itself to make it instantaneous */
+}
+
+
+/* Social Icons */
+
+.fa,
+.fa-brands {
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #61c2a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa:hover,
+.fa-brands:hover {
+    opacity: 0.7;
+    color: #d126bd;
+}
+
+.fa-x-twitter,
+.fa-github,
+.fa-linkedin,
+.fa-envelope,
+.fa-bars {
+    background-color: #1b1542;
 }

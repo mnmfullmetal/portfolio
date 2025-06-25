@@ -13,6 +13,11 @@
         <hr>
         <p>Building engaging worlds and intuitive software, from concept to code.</p>
       </div>
+      <div id="split-nav-links">
+        <a href="#about" class="nav-link-scramble" data-value="About">About</a>
+        <a href="#projects" class="nav-link-scramble" data-value="Projects">Projects</a>
+        <a href="#resume" class="nav-link-scramble" data-value="Experience">Experience</a>
+      </div>
         <div id="split-nav-socials">
            <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
           <a
@@ -21,11 +26,6 @@
           ></a>
             <a href="contact.html" class="fa-brands fa-x-twitter"></a>
           <a href="contact.html" class="fa fa-envelope"></a>
-      </div>
-      <div id="split-nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
       </div>
     </div>
 
@@ -42,14 +42,14 @@
                   <li><span id="highlighted-word"><strong>Platforms:</strong></span> PC, Mobile, Web, VR/AR</li>
                 </ul>
                 <p>Throughout my career, I've thrived on the unique challenges each project presents. This has allowed me to continuously refine my skills, adapt to new pipelines, and excel as a collaborative team member. I am driven by the challenge of creating memorable and engaging experiences for users.</p>
-                <p>I'm always excited to connect and build the next great thing. Follow my journey and see my latest work on my socials!</p>           
+                <p>I'm always excited to connect and build the next great thing. Follow my journey and feel free to connect with me on my socials!</p>           
          </section>
 
             <section id="projects" class="scroll-section">
                 {% for project in projects %}
                 <div id="project-container">
                   <div id="project-details">
-                  <h2>{{project.name}}</h2>
+                  <h2 id="project-title" data-value="{{project.name}}">{{project.name}}</h2>
                   <p>{{project.description}}</p>
                   {% for tool in project.tools %}
                   <span id="project-tool">{{tool}}</span>
