@@ -4,7 +4,7 @@ PROJECTS = [
     {
         'name': "Unity Asset Organiser v.1", 
         'description': "A custom Unity editor tool designed to enforce project organisational standards and streamline development by eliminating tedious manual asset sorting.",
-        'image': "image here",
+        'image': "asset-organiser-main.jpg",
         'hasDemo': False,
         'Demo': None,
         'tools': ["C#", "UXML", "USS", "Unity 2022"]
@@ -13,7 +13,7 @@ PROJECTS = [
     {
         'name': "Mech-Occult", 
         'description': " An isometric, wave-based arena shooter",
-        'image': "mech-occult.jpg",
+        'image': "mech-occult-main.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
@@ -23,7 +23,7 @@ PROJECTS = [
     {
         'name': "Mystic Matches", 
         'description': "A fantasy-themed card matching game",
-        'image': "mystic-matches.jpg",
+        'image': "mystic-matches-main.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
@@ -32,7 +32,7 @@ PROJECTS = [
     {
         'name': "Velocity VR", 
         'description': "A survival horror VR game designed for the HTC Vive",
-        'image': "image here",
+        'image': "velocityvr-main.jpeg",
         'hasDemo': False,
         'Demo': None,
         'tools': ["C++", "Maya Autodesk", "Adobe Photoshop", "ZBrush", "Unreal Engine 4"]
@@ -54,7 +54,7 @@ LATEST_PROJECTS = [
      {
         'name': "Unity Asset Organiser v.1", 
         'description': "A custom Unity editor tool designed to enforce project organisational standards and streamline development by eliminating tedious manual asset sorting.",
-        'image': "image here",
+        'image': "asset-organiser-main.jpg",
         'hasDemo': False,
         'Demo': None,
         'tools': ["C#", "UXML", "USS", "Unity 2022"]
@@ -63,7 +63,7 @@ LATEST_PROJECTS = [
     {
         'name': "Mech-Occult", 
         'description': "An isometric, wave-based arena shooter",
-        'image': "mech-occult.jpg",
+        'image': "mech-occult-main.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["C#", "Blender", "GIMP", "Krita","Unity 2022"]
@@ -72,7 +72,7 @@ LATEST_PROJECTS = [
     {
         'name': "Mystic Matches", 
         'description': "A fantasy-themed card matching game",
-        'image': "mystic-matches.jpg",
+        'image': "mystic-matches-main.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["C#", "Blender", "GIMP", "Krita", "Unity 2022"]
@@ -81,7 +81,7 @@ LATEST_PROJECTS = [
     {
         'name': "Velocity VR", 
         'description': "A survival horror VR game designed for the HTC Vive",
-        'image': "image here",
+        'image': "velocityvr-main.jpeg",
         'hasDemo': False,
         'Demo': None,
         'tools': ["C++", "Maya Autodesk", "Adobe Photoshop", "ZBrush", "Unreal Engine 4"]

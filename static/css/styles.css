@@ -269,17 +269,23 @@ header {
      border-style: solid;
     border-color: #36e5ae;
     border-width: 2px;
-    border-radius: 8px; /* Add rounded corners */
-     transform: translateY(-5px); /* The subtle lift effect */
-    /* A soft glow that works well against the dark purple background */
-    box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), /* A wider, soft lavender glow */
-                0 0 8px rgba(220, 200, 255, 0.2);   /* A slightly brighter, tighter inner glow */
+    border-radius: 8px; 
+     transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), 
+                0 0 8px rgba(220, 200, 255, 0.2);   
 }
 
 
 #project-container:hover #project-title{
     color: #d126bd;
     transition: color 0.3s ease-in-out;
+}
+
+#project-container:hover img{
+    border-style: solid;
+    border-radius: 8px;
+    border-color:#69988893;
+    border-width: 1px;
 }
 
 
@@ -296,7 +302,7 @@ header {
 
 
 #project-image-container img{
- height: 100%;
+ height: 300px;
  width: 100%;
 }
 
