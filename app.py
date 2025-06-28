@@ -39,7 +39,7 @@ def build():
                 "cache_buster": cache_buster
             }
             if page_name == 'index':
-                context_data['projects'] = data.LATEST_PROJECTS
+                context_data['projects'] = data.PROJECTS
                 
 
             if page_name == 'projects':

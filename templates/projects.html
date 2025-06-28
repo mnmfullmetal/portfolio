@@ -4,29 +4,21 @@
 
 {% block content %}
 <div id="projects-header">
-<h1>My Projects</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro nisi, velit modi deleniti aliquid accusantium, corrupti odit labore voluptate reiciendis obcaecati aspernatur numquam officiis ut delectus eligendi non ipsam.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deleniti nemo voluptas. Ratione asperiores natus, veniam illum ipsam possimus? Mollitia earum laboriosam qui voluptatibus suscipit reiciendis assumenda velit ut consequatur!</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, ipsa. Nulla assumenda culpa aspernatur alias quia aliquid placeat exercitationem cupiditate, nisi deserunt, commodi ipsum fuga quo dolores sit, deleniti ipsa. Perspiciatis sunt officiis quam nisi labore? Reprehenderit delectus reiciendis eius a cupiditate molestiae earum quae repudiandae mollitia, doloribus repellendus aspernatur totam quidem atque, enim voluptas, odio necessitatibus consequatur. Est sit non hic consequatur quidem nulla laboriosam, rerum suscipit voluptate necessitatibus debitis eaque commodi, amet perferendis itaque? Maxime magnam maiores nam dolor! Minima illo inventore voluptates nulla! Accusamus, cum sequi, quidem provident assumenda consequuntur neque, est harum ut voluptas obcaecati quibusdam.</p>
+  <h1>Projects</h1>
 </div>
 {% for project in projects %}
-      <div class="content-container" id="projects-content-container">
-        <div class="content-left" id="project-content-left">
-          <div>
-         <h1>{{project.name}}</h1>
-          </div>
-         <hr>
-          <div id="project-content-buttons">
-            <button>View on Github</button>
-            <button>View Project</button>
-            {% if project.hasDemo %}
-            <button>Play Demo</button>
-            {% endif %}
-          </div>
-        </div>
-        <div class="content-right" id="project-content-right">
-          {{project.description}}
-        </div>
-      </div>
-        {% endfor %}
+<a href="{{project.pagePath}}">
+<div id="project-container">
+                  <div id="project-details">
+                  <h2 id="project-title" data-value="{{project.name}}">{{project.name}}</h2>
+                  <p>{{project.description}}</p>
+                  {% for tool in project.tools %}
+                  <span id="project-tool">{{tool}}</span>
+                  {% endfor %}
+                  </div>
+                </div>
+
+</a>
+                
+                {% endfor %}
 {% endblock %}

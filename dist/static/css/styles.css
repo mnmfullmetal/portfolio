@@ -1,6 +1,8 @@
 /* Global styles */
 
-
+a {
+    text-decoration: none;
+}
 
 html {
     scroll-behavior: smooth;
@@ -46,7 +48,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1; 
     height: var(--header-height);
     background-color: #0b001f;
 }
@@ -258,6 +260,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
+    color: #f2f2f2;
     
 
 
@@ -281,6 +284,23 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
+#project-container:hover #project-title::after{
+    content: ".";
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    0%{
+        opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
 #project-container:hover img{
     border-style: solid;
     border-radius: 8px;
@@ -302,7 +322,7 @@ header {
 
 
 #project-image-container img{
- height: 300px;
+ height: 100%;
  width: 100%;
 }
 
@@ -318,6 +338,11 @@ header {
     padding-left: 2rem;
 }
 
+#projects-header{
+    color:#f2f2f2;
+    text-align: center;
+    margin-bottom: 10vh;
+}
 
 
 
@@ -412,6 +437,7 @@ header {
 body::before {
     content: '';
     position: fixed;
+    z-index: 2;
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
@@ -451,4 +477,8 @@ body::before {
 .fa-envelope,
 .fa-bars {
     background-color: #1b1542;
+}
+
+#project-text{
+    color:#f2f2f2;
 }
