@@ -3,12 +3,110 @@
 {% block title %} Velocity VR {% endblock %}
 
 {% block content %}
-<div></div>
-<div id="project-text">
-    <h1>Velocity VR</h1>
-    <p>Mystic Matches is a competitive matching card game with a fantasy theme. Players must match sets of face down cards to earn points, points which are then used to unlock new card skins, table settings, themes, and much more! </p>
-    <p>Inspired by the card game "Memory", I started to develop this as a fun solo project but has since evolved into the basis for another, much larger project I'm undertaking with another developer. Currently this larger project, under the same name, is in the pre-production phase and I hope to have  working prototype very shortly. </p>
-    <p>For now, the demo version of Mystic Matches is available to</p>
+
+<div class="video-container">
+  <video autoplay loop muted playsinline poster="placeholder-image.jpg" id="bg-video">
+    <source src="static/videos/velocityvr-monster2.mp4" type="video/mp4">
+  </video>
+  <div class="text-overlay">
+<h1 id="project-title">Velocity VR</h1>
+     <p>Velocity VR is a survival horror VR game that places the player on an abandoned colony space craft, wheelchair bound the player must escape the ship while evading the enemy AI, an intelligent and hostile extraterrestrial that is determined to wipe out all life forms onboard.</p>
+    <p>I made this game, alongside a team of 3 programmers and 2 artists, for AIE during the major project module of my Design course. It was a 14 week project and was a brilliant exercise in not only scoping and time management, but also in pushing ourselves as developers as none of us had ever undertaken a VR project before. Overall the project was a success and exceedingly valuable to me, for many reasons, but the one that stands out the most is I got to experience what it was like leading a production to completion with a team that I hold very dear to my heart.</p>
+  </div>
+</div>
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="veloityvr-shotgun.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="velocityvr-shotgun2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="velocityvr-ship.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="velocityvr-ship2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="velocityvr-ship3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="velocityvr-ship4.jpg" style="width:100%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+      <img src="velocityvr-ship5.jpg" style="width:100%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 8</div>
+      <img src="velocityvr-ship6.jpg" style="width:100%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 9 </div>
+      <img src="velocityvr-ship7.jpg" style="width:100%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 10 </div>
+      <img src="velocityvr-deathscreen.png" style="width:100%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="velocityvr-banner.jpg" style="width:100%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
 </div>
 
+
 {% endblock %}
+
+
+

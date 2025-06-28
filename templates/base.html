@@ -34,7 +34,7 @@
           <a href="contact.html" class="fa fa-envelope"></a>
         </div>
         <a {% if current_page == 'index' %}class="active"{% endif %} href="index.html">Home</a>
-          <a  {% if current_page == 'projects' %}class="active"{% endif %} href="projects.html">Projects</a>
+          <a  {% if current_page in ['projects', 'mystic-matches', 'velocity-vr', 'mech-occult', 'asset-organiser' ] %}class="active"{% endif %} href="projects.html">Projects</a>
         <a {% if current_page == 'gallery' %}class="active"{% endif %} href="gallery.html">Gallery</a>
         <a {% if current_page == 'contact' %}class="active"{% endif %} href="contact.html">Contact</a>
         <a
