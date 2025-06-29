@@ -9,6 +9,7 @@ const App = {
     lastScrollTop: 0,
     slideIndex: 1,
     isThrottled: false,
+     currentPreviewIndex: 1,
   },
   
   init() {
@@ -17,25 +18,64 @@ const App = {
       this.textScramble();
       this.splitNavObserver();
       this.mouseMoveGradient();
-      this.slideshow(); // This will set up the modal functions
+      this.slideshow();
+      this.previewer(); 
       this.responsiveNav();
     });
   },
 
-  // This is the missing function your HTML needs
+   previewer() {
+        window.updatePreview = (index) => this.updatePreview(index);
+        window.openModalForCurrent = () => this.openModalForCurrent();
+
+        this.updatePreview(1);
+    },
+
+
+    updatePreview(index) {
+        const slides = document.querySelectorAll("#myModal .mySlides");
+        const thumbnails = document.querySelectorAll(".thumbnail-img");
+        if (slides.length === 0) return;
+
+        if (index > slides.length) { index = 1; }
+        if (index < 1) { index = slides.length; }
+        
+        this.state.currentPreviewIndex = index;
+
+        const previewViewer = document.getElementById("preview-viewer");
+        const slideToShow = slides[index - 1];
+        const mediaElement = slideToShow.querySelector('img, video');
+        if (!mediaElement) return;
+
+        const clonedMedia = mediaElement.cloneNode(true);
+        
+        if (clonedMedia.tagName === 'VIDEO') {
+            clonedMedia.muted = true;
+            clonedMedia.controls = false;
+            clonedMedia.play().catch(e => console.log("Autoplay blocked."));
+        }
+
+        previewViewer.innerHTML = '';
+        previewViewer.appendChild(clonedMedia);
+        
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        if (thumbnails[index - 1]) {
+            thumbnails[index - 1].classList.add('active');
+        }
+    },
+
+
+    
+
   openModal() {
     document.getElementById("myModal").style.display = "block";
   },
 
-  // This is also a missing function
   closeModal() {
     document.getElementById("myModal").style.display = "none";
   },
   
-  // This is the correct slideshow function that sets up the modal controls
   slideshow() {
-    // Make the modal functions and slideshow controls globally accessible
-    // so the 'onclick' attributes in the HTML can use them.
     window.openModal = () => this.openModal();
     window.closeModal = () => this.closeModal();
     window.plusSlides = (n) => {
@@ -48,25 +88,20 @@ const App = {
     };
   },
 
-  // This is the correct showSlides function that controls the slides INSIDE the modal
   showSlides() {
     const slides = document.querySelectorAll("#myModal .mySlides");
     if (slides.length === 0) return;
 
-    // Handle wrap-around logic
     if (this.state.slideIndex > slides.length) { this.state.slideIndex = 1 }
     if (this.state.slideIndex < 1) { this.state.slideIndex = slides.length }
 
-    // Hide all modal slides
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
 
-    // Show only the correct slide
     slides[this.state.slideIndex - 1].style.display = "block";
   },
 
-  // --- All your other functions below are fine and do not need to be changed ---
 
   headerScroll() {
     const header = document.getElementById("main-header");

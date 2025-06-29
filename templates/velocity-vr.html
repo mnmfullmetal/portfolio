@@ -5,35 +5,43 @@
 {% block content %}
 
 <div class="video-container">
-  <video autoplay loop muted playsinline poster="static/images/placeholder-image.jpg" id="bg-video">
-    <source src="static/videos/velocityvr-monster2.mp4" type="video/mp4">
-  </video>
-  <div class="text-overlay">
-<h1 id="project-title">Velocity VR</h1>
-     <p>Velocity VR is a survival horror VR game that places the player on an abandoned colony space craft, wheelchair bound the player must escape the ship while evading the enemy AI, an intelligent and hostile extraterrestrial that is determined to wipe out all life forms onboard.</p>
-    <p>As the project lead, I guided a team of five fellow students—three programmers and two artists—through a 14-week development cycle to create a compelling survival horror VR experience. This project, a core component of my AIE Design course, challenged us to master VR development for the first time. We successfully delivered a polished game where players, confined to a wheelchair, must navigate an abandoned spacecraft and evade a sophisticated enemy AI. "Velocity VR" was a testament to our team's rapid learning, effective scope management, and collaborative spirit. Leading this talented team to a successful launch was a deeply rewarding experience and a highlight of my time at AIE.</p>    
-  <a href="https://youtu.be/9IPDwGMQ6rg" id="projects-links">View Beta</a>
-  
-  </div>
+    <video autoplay loop muted playsinline poster="static/images/placeholder-image.jpg" id="bg-video">
+        <source src="static/videos/velocityvr-monster2.mp4" type="video/mp4">
+    </video>
 
-  <div class="on-video-gallery">
-    <img class="thumbnail-img" src="static/images/velocityvr-banner.jpg" onclick="openModal();currentSlide(1)" alt="Velocity VR Banner">
-    <img class="thumbnail-img" src="static/images/velocityvr-screenshot.jpg" onclick="openModal();currentSlide(2)" alt="Monster Video Thumbnail">
-    <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="openModal();currentSlide(3)" alt="Shotgun Video Thumbnail">
-    <img class="thumbnail-img" src="static/images/velocityvr-shotgun2.jpg" onclick="openModal();currentSlide(4)" alt="Player with Shotgun">
-    <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="openModal();currentSlide(5)" alt="First-person shotgun view">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship.jpg" onclick="openModal();currentSlide(6)" alt="Ship corridor">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship2.jpg" onclick="openModal();currentSlide(7)" alt="Ship corridor 2">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship3.jpg" onclick="openModal();currentSlide(8)" alt="Ship corridor 3">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship4.jpg" onclick="openModal();currentSlide(9)" alt="Ship corridor 4">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship5.jpg" onclick="openModal();currentSlide(10)" alt="Ship corridor 5">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship6.jpg" onclick="openModal();currentSlide(11)" alt="Ship corridor 6">
-    <img class="thumbnail-img" src="static/images/velocityvr-ship7.png" onclick="openModal();currentSlide(12)" alt="Ship corridor 7">
-    <img class="thumbnail-img" src="static/images/velocityvr-deathscreen.png" onclick="openModal();currentSlide(13)" alt="Game Over Screen">
-  </div>
+    <div class="overlay-content-wrapper">
+
+        <div class="text-overlay">
+            <h1 id="project-title">Velocity VR</h1>
+            <hr>
+            <p>Velocity VR is a survival horror VR game that places the player on an abandoned colony space craft, wheelchair bound the player must escape the ship while evading the enemy AI, an intelligent and hostile extraterrestrial that is determined to wipe out all life forms onboard.</p>
+    <p>As the project lead, I guided a team of five fellow students—three programmers and two artists—through a 14-week development cycle to create a compelling survival horror VR experience. This project, a core component of my AIE Design course, challenged us to master VR development for the first time. We successfully delivered a polished game where players, confined to a wheelchair, must navigate an abandoned spacecraft and evade a sophisticated enemy AI. "Velocity VR" was a testament to our team's rapid learning, effective scope management, and collaborative spirit. Leading this talented team to a successful launch was a deeply rewarding experience and a highlight of my time at AIE.</p>      
+
+        </div>
+
+        <div id="preview-viewer" ondblclick="openModalForCurrent()">
+            </div>
+
+        <div class="on-video-gallery">
+            <img class="thumbnail-img" src="static/images/velocityvr-banner.jpg" onclick="updatePreview(1)" alt="Velocity VR Banner">
+            <img class="thumbnail-img" src="static/images/velocityvr-screenshot.jpg" onclick="updatePreview(2)" alt="Monster Video Thumbnail">
+            <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="updatePreview(3)" alt="Shotgun Video Thumbnail">
+            <img class="thumbnail-img" src="static/images/velocityvr-shotgun2.jpg" onclick="updatePreview(4)" alt="Player with Shotgun">
+            <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="updatePreview(5)" alt="First-person shotgun view">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship.jpg" onclick="updatePreview(6)" alt="Ship corridor">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship2.jpg" onclick="updatePreview(7)" alt="Ship corridor 2">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship3.jpg" onclick="updatePreview(8)" alt="Ship corridor 3">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship4.jpg" onclick="updatePreview(9)" alt="Ship corridor 4">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship5.jpg" onclick="updatePreview(10)" alt="Ship corridor 5">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship6.jpg" onclick="updatePreview(11)" alt="Ship corridor 6">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship7.png" onclick="updatePreview(12)" alt="Ship corridor 7">
+            <img class="thumbnail-img" src="static/images/velocityvr-deathscreen.png" onclick="updatePreview(13)" alt="Game Over Screen">
+        </div>
+        
+    </div>
 </div>
 
- <div> 
+
 
 
 <div id="myModal" class="modal">
@@ -57,7 +65,7 @@
 
     <div class="mySlides">
       <div class="numbertext">3 / 13</div>
-      <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
         <source src="static/videos/velocityvr-shotgun.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -127,6 +135,7 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
+
 
  
 </div>
