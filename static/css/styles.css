@@ -124,11 +124,11 @@ header {
     color: #36e5ae;
 }
 
-#resume-links {
+#content-links {
    margin-top: 5vh;
 }
 
-#resume-links a{
+#content-links a{
    border: solid 1px #61c2a358;
    border-radius: 8px;
     background-color: #61c2a358;
@@ -136,7 +136,7 @@ header {
     margin-left: 1rem;
 }
 
-#resume-links a:hover {
+#content-links a:hover {
     color: #d126bd;
     transition: all 0.3s ease-in-out;
    border: solid 1px #36e5ae;
