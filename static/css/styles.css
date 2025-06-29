@@ -124,6 +124,25 @@ header {
     color: #36e5ae;
 }
 
+#resume-links {
+   margin-top: 5vh;
+}
+
+#resume-links a{
+   border: solid 1px #61c2a358;
+   border-radius: 8px;
+    background-color: #61c2a358;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+#resume-links a:hover {
+    color: #d126bd;
+    transition: all 0.3s ease-in-out;
+   border: solid 1px #36e5ae;
+
+}
+
 #split-nav-container {
     display: grid;
     grid-template-columns: 40% 1fr;
