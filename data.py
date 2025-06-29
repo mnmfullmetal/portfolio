@@ -59,7 +59,7 @@ PROJECTS = [
     {
         'name': "Personal Website v.1", 
         'description': "blah blah blah blah",
-        'mainImage': "image here",
+        'mainImage': "placeholder-image.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
