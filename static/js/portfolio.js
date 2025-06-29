@@ -65,6 +65,13 @@ const App = {
     },
 
 
+    openModalForCurrent() {
+    this.state.slideIndex = this.state.currentPreviewIndex;
+    this.showSlides();
+    this.openModal();
+  },
+
+
     
 
   openModal() {

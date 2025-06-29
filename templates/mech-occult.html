@@ -3,11 +3,141 @@
 {% block title %} Mech-Occult {% endblock %}
 
 {% block content %}
-<div></div>
-<div id="project-header">
-    <h1 id="project-title">Mech-Occult</h1>
-    <p>Abandoned by your human masters and left with the impossible task of containing the unknown horrors spilling in from the void, it is now up to you, the last "Cleaner Droid", to save the world. Mech-Occult is an Isometric arena shooter that takes place in a secret military base, through which the player must battle waves of enemies in order to survive and close the containment breach before all hope is lost.</p>
-    <p>This is a solo project I have been working on and is still currently under development. Developing this has been a joy and while I have many mechanics, features, and overall visuals to implement still, I have the demo available to <span>PLAY HERE</span></p>
-</div>
+<div class="split-layout-container">
 
+    <div class="video-column">
+       <div id="preview-viewer" ondblclick="openModalForCurrent()">
+            </div>
+
+        <div class="on-video-gallery">
+            <img class="thumbnail-img" src="static/images/mech-occult-gameplay.png" onclick="updatePreview(1)" alt="Velocity VR Banner">
+            <img class="thumbnail-img" src="static/images/mech-occult-gameplay2.jpg" onclick="updatePreview(2)" alt="Monster Video Thumbnail">
+            <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="updatePreview(3)" alt="Shotgun Video Thumbnail">
+            <img class="thumbnail-img" src="static/images/velocityvr-shotgun2.jpg" onclick="updatePreview(4)" alt="Player with Shotgun">
+            <img class="thumbnail-img" src="static/images/ImpactVFXGraph.jpg" onclick="updatePreview(5)" alt="First-person shotgun view">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship.jpg" onclick="updatePreview(6)" alt="Ship corridor">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship2.jpg" onclick="updatePreview(7)" alt="Ship corridor 2">
+            <img class="thumbnail-img" src="static/images/MuzzleFlashVFXgraph.jpg" onclick="updatePreview(8)" alt="Ship corridor 3">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship4.jpg" onclick="updatePreview(9)" alt="Ship corridor 4">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship5.jpg" onclick="updatePreview(10)" alt="Ship corridor 5">
+            <img class="thumbnail-img" src="static/images/velocityvr-ship6.jpg" onclick="updatePreview(11)" alt="Ship corridor 6">
+         
+        </div>
+
+
+        <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    
+     <div class="mySlides">
+      <div class="numbertext">1 / 11</div>
+      <img src="static/images/mech-occult-gameplay.png" style="width:100%">
+      <div class="text">Players Shotgun 1</div>
+    </div>
+
+    
+     <div class="mySlides">
+      <div class="numbertext">2 / 11</div>
+      <img src="static/images/mech-occult-gameplay2.jpg" style="width:100%">
+      <div class="text">Players Shotgun 1</div>
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 11</div>
+      <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/velocityvr-monster.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The alien monster that stalks the player</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-impacteffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+
+    
+     <div class="mySlides">
+      <div class="numbertext">5 / 11</div>
+      <img src="static/images/ImpactVFXGraph.jpg" style="width:100%">
+      <div class="text">Players Shotgun 1</div>
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-levelup.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-muzzleflash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+
+
+     <div class="mySlides">
+      <div class="numbertext">8 / 11</div>
+      <img src="static/images/MuzzleFlashVFXgraph.jpg" style="width:100%">
+      <div class="text">Players Shotgun 1</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-shieldeffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-spawneffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 11</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mech-occult-spawneffect2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">The players shotgun animations</div>
+    </div>
+    
+   
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+        
+    </div>
+    </div>
+
+    <div class="text-column">
+        <h1 id="project-title">Mech-Occult</h1>
+        <p>In a top-secret military installation, a catastrophic containment breach has unleashed unknowable horrors from the void. With humanity having abandoned the facility, the last line of defense is an unlikely one: a lone "Cleaner Droid." In Mech-Occult, an isometric arena shooter, players take on this critical role. You must courageously battle relentless waves of grotesque entities across the desolate floors of the military base. The primary objective is a race against time: survive the onslaught, seal the breach, and prevent a global catastrophe before all hope is lost.</p>
+        <p>This is a solo passion project currently in active development. Creating Mech-Occult has been a rewarding journey of skill development and creative expression. While many mechanics, features, and visual elements are still in the pipeline, a playable demo is now available, offering a glimpse into the core gameplay experience. You can PLAY THE DEMO HERE.</p>
+    </div>
+
+</div>
 {% endblock %}

@@ -27,6 +27,7 @@ main {
     scroll-margin-top: var(--header-height);
     background-color: #0b001f;
     height: auto;
+    min-height: 100vh;
     width: auto;  
     font-size: 1.1rem;
 
@@ -583,6 +584,51 @@ body::before {
 
 .modal .mySlides {
   display: none;
+}
+
+
+
+.split-layout-container {
+    display: flex; 
+    align-items: center;
+    gap: 3rem; 
+    width: 90%;
+    max-width: 1400px;
+    margin: 4rem auto; 
+}
+
+
+.video-column {
+    flex: 1; 
+    min-width: 0; 
+
+  
+    position: relative;
+    z-index: 1;
+}
+
+
+.video-column video {
+    width: 100%;
+    height: auto;
+    display: block; 
+    border-radius: 8px; 
+}
+
+.text-column {
+    flex: 1; 
+    color: #f2f2f2;
+}
+
+#project-title {
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+}
+
+.text-column p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 
