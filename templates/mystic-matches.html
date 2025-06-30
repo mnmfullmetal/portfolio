@@ -3,12 +3,171 @@
 {% block title %} Mystic Matches {% endblock %}
 
 {% block content %}
-<div></div>
-<div id="project-header">
-    <h1>Mystic Matches</h1>
-   <p>Mystic Matches is a competitive matching card game with a fantasy theme. Players must match sets of face down cards to earn points, points which are then used to unlock new card skins, table settings, themes, and much more! </p>
-    <p>Inspired by the card game "Memory", I started to develop this as a fun solo project but has since evolved into the basis for another, much larger project I'm undertaking with another developer. Currently this larger project, under the same name, is in the pre-production phase and I hope to have  working prototype very shortly. </p>
-    <p>For now, the demo version of Mystic Matches is available to</p>
+
+
+<div class="split-layout-container">
+
+    <div class="video-column">
+       <div id="preview-viewer" ondblclick="openModalForCurrent()">
+            </div>
+
+        <div class="on-video-gallery">
+            <img class="thumbnail-img" src="static/images/mystic-matches-gameplayscreenshot.jpg" onclick="updatePreview(1)" alt="Mystic Matches gameplay">
+            <img class="thumbnail-img" src="static/images/mystic-matches-rules.jpg" onclick="updatePreview(2)" alt="Mystic Matches Rules">
+            <img class="thumbnail-img" src="static/images/mystic-matches-cardeffect2.jpg" onclick="updatePreview(3)" alt="Illusion card effect made with Shader Graph">
+            <img class="thumbnail-img" src="static/images/mystic-matches-cardeffectscreenshot.jpg" onclick="updatePreview(4)" alt="Materialised card effect made with VFX Graph">
+            <img class="thumbnail-img" src="static/images/mystic-matches-orbeffectscreenshot.jpg" onclick="updatePreview(5)" alt="Mystic Orb effect made with VFX Graph">
+            <img class="thumbnail-img" src="static/images/mystic-matches-impacteffectscreenshot.jpg" onclick="updatePreview(6)" alt="Impact effect made with Unity particle systems">
+            <img class="thumbnail-img" src="static/images/mystic-matches-portaleffectscreenshot.jpg" onclick="updatePreview(7)" alt="Portal effect made with Unity particle systems">
+            <img class="thumbnail-img" src="static/images/mystic-matches-flying.jpg" onclick="updatePreview(8)" alt="Mystic Matches gameplay - card flying effect">
+            <img class="thumbnail-img" src="static/images/mystic-matches-match.jpg" onclick="updatePreview(9)" alt="Mystic Matches gameplay - match effect">
+            <img class="thumbnail-img" src="static/images/mystic-matches-select.jpg" onclick="updatePreview(10)" alt="Mystic Matches gameplay - select effect">
+      
+            
+         
+        </div>
+
+        <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    
+
+
+      <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-gameplay.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Mystic Matches gameplay</div>
+    </div>
+
+     <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img src="static/images/mystic-matches-rules.jpg" style="width:100%">
+      <div class="text">Mystic Matches rules</div>
+    </div>
+
+
+
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-cardeffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Illusion card effect made with Shader Graph</div>
+    </div>
+
+    
+
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-cardeffect2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Materialised card effect made with VFX Graph</div>
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-orbeffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Mystic Orb effect made with VFX Graph</div>
+    </div>
+
+
+     
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-impacteffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Impact effect made with Unity particle systems</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
+        <source src="static/videos/mystic-matches-portaleffect.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text">Portal effect made with Unity particle systems</div>
+    </div>
+
+
+
+      <div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img src="static/images/mystic-matches-flying.jpg" style="width:100%">
+      <div class="text">Mystic Matches gameplay - card flying effect</div>
+    </div>
+
+    
+
+      <div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img src="static/images/mystic-matches-match.jpg" style="width:100%">
+      <div class="text">Mystic Matches gameplay - match effect</div>
+    </div>
+
+
+    
+
+     
+    <div class="mySlides">
+      <div class="numbertext">10 / 10</div>
+      <img src="static/images/mystic-matches-select.jpg" style="width:100%">
+      <div class="text">Mystic Matches gameplay - select effect</div>
+    </div>
+
+
+      
+     
+
+
+     
+
+     
+
+     
+
+
+    
+       
+   
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+        
+    </div>
+    </div>
+
+    <div class="text-column">
+        <h1 id="project-title">Mystic Matches</h1>
+        <hr>
+         <p>Mystic Matches is a competitive matching card game set in a rich fantasy world. Players will test their focus and strategy to match sets of face-down cards, earning points to unlock a wide array of cosmetic upgrades, including new card skins, table settings, and themes. </p>
+    <p>Originally a solo endeavor, Mystic Matches has since formed the foundation for a more expansive project currently in pre-production with a dedicated development partner. We are excited to be building a working prototype and will be sharing more details soon. For now, we invite you to experience the core gameplay that started it all. </p>
+       <p>You can <span id="content-links"> <a id="highlighted-word" href="mystic-matches-demo.html">Play The Demo Here</a></span></p>
+        
+    </div>
+
 </div>
 
 {% endblock %}
+
+
+
+

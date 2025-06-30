@@ -650,6 +650,12 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
+ .fullscreen-iframe {
+            width: 100vw;  /* 100% of the viewport width */
+            height: 100vh; /* 100% of the viewport height */
+            border: none;  /* Removes the default border around the iframe */
+
+        }
 
 
 /* Media Queries and Animations */
