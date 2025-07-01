@@ -376,9 +376,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 70%;
     padding: 2rem;
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 #projects-links{
@@ -492,6 +492,7 @@ body::before {
     flex-grow: 1; 
     min-height: 0; 
     cursor: pointer; 
+    margin-top: 6rem;
 }
 
 #preview-viewer img,
@@ -517,8 +518,8 @@ body::before {
 }
 
 .thumbnail-img {
-    width: 100px;
-    height: 60px;
+    width: 150px;
+    height: auto;
     object-fit: cover;
     opacity: 0.7;
     cursor: pointer;
@@ -612,11 +613,11 @@ body::before {
 
 .split-layout-container {
     display: flex; 
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem; 
     width: 90%;
     max-width: 1400px;
-    margin: 4rem auto ; 
+    margin: 4rem auto 0 auto ; 
 }
 
 
@@ -668,9 +669,14 @@ body::before {
         justify-content: center; 
     }
 
-    .topnav > .social-tab p { 
-        display: none;
+    .social-tab > a.fa,
+    .social-tab > a.fa-brands {
+        padding: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
     }
+
 
     .topnav > a:not(.icon),
     .topnav > .dropdown {
