@@ -27,7 +27,7 @@ main {
     scroll-margin-top: var(--header-height);
     background-color: #0b001f;
     height: auto;
-    min-height: 120vh;
+    min-height: 150vh;
     width: auto;  
     font-size: 1.1rem;
 
@@ -616,15 +616,13 @@ body::before {
     gap: 3rem; 
     width: 90%;
     max-width: 1400px;
-    margin: 4rem auto; 
+    margin: 4rem auto ; 
 }
 
 
 .video-column {
     flex: 1; 
     min-width: 0; 
-
-  
     position: relative;
     z-index: 1;
 }
@@ -653,12 +651,12 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
- .fullscreen-iframe {
-            width: 100vw;  /* 100% of the viewport width */
-            height: 100vh; /* 100% of the viewport height */
-            border: none;  /* Removes the default border around the iframe */
+.fullscreen-iframe {
+     width: 100vw; 
+     height: 100vh; 
+     border: none;   
 
-        }
+}
 
 
 /* Media Queries and Animations */

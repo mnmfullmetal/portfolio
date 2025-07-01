@@ -5,146 +5,42 @@
 {% block content %}
 <div class="split-layout-container">
 
+
     <div class="video-column">
        <div id="preview-viewer" ondblclick="openModalForCurrent()">
             </div>
 
         <div class="on-video-gallery">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplayscreenshot.jpg" onclick="updatePreview(1)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplay.png" onclick="updatePreview(2)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplay2.jpg" onclick="updatePreview(3)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/flashscreenshot.jpg" onclick="updatePreview(4)" alt="Bullet impact effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/ImpactVFXGraph.jpg" onclick="updatePreview(5)" alt="Bullet impact effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/levelupscreenshot.jpg" onclick="updatePreview(6)" alt="Level-up effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/muzzlescreenshot.jpg" onclick="updatePreview(7)" alt="Muzzle flash effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/MuzzleFlashVFXgraph.jpg" onclick="updatePreview(8)" alt="Muzzle flash effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/shieldscreenshot.jpg" onclick="updatePreview(9)" alt="Shield effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/spawnscreenshot.jpg" onclick="updatePreview(10)" alt="Spawn effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/spawnscreenshot2.jpg" onclick="updatePreview(11)" alt="Spawn effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/gameplayscreenshot2.jpg" onclick="updatePreview(12)" alt="Mech-occult gameplay - Dithering effect">
-            
-         
+            <img class="thumbnail-img" src="static/images/asset-organiser-main.jpg" onclick="updatePreview(1)" alt="Mech-occult gameplay">
+           
         </div>
 
         <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    
-
 
       <div class="mySlides">
-      <div class="numbertext">1 / 12</div>
+      <div class="numbertext">1 / 1</div>
       <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-gameplay2.mp4" type="video/mp4">
+        <source src="static/videos/asset-organiser-demovid.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="text">Mech-occult gameplay</div>
     </div>
-
-
-     <div class="mySlides">
-      <div class="numbertext">2 / 12</div>
-      <img src="static/images/mech-occult-gameplay.png" style="width:100%">
-      <div class="text">Mech-occult gameplay</div>
-    </div>
-
-    
-     <div class="mySlides">
-      <div class="numbertext">3 / 12</div>
-      <img src="static/images/mech-occult-gameplay2.jpg" style="width:100%">
-      <div class="text">Mech-occult gameplay</div>
-    </div>
-
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-impacteffect.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Bullet impact effect made with VFX Graph</div>
-    </div>
-
-    
-     <div class="mySlides">
-      <div class="numbertext">5 / 12</div>
-      <img src="static/images/ImpactVFXGraph.jpg" style="width:100%">
-      <div class="text">Bullet impact effect made with VFX Graph</div>
-    </div>
-
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-levelup.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Level-up effect made with Unity particle systems</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">7 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-muzzleflash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Muzzle flash effect made with VFX Graph</div>
-    </div>
-
-
-     <div class="mySlides">
-      <div class="numbertext">8 / 12</div>
-      <img src="static/images/MuzzleFlashVFXgraph.jpg" style="width:100%">
-      <div class="text">Muzzle flash effect made with VFX Graph</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">9 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-shieldeffect.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Shield effect made with Shader Graph</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">10 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-spawneffect.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Spawn effect made with Unity particle systems</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">11 / 12</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-spawneffect2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Spawn effect made with Unity particle systems</div>
-    </div>
-
-        <div class="mySlides">
-      <div class="numbertext">12 / 12</div>
-      <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/mech-occult-gameplay.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">Mech-occult gameplay - Dithering effect</div>
-    </div>
-    
-   
-
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+      </div>        
+    </div>
+    <div id= "content-links">
+  <span id=><a id="highlighted-word" href="https://github.com/mnmfullmetal/AssetOrganiser_v1">View On Github</a></span>
+  <span id=><a id="highlighted-word" href="https://github.com/mnmfullmetal/AssetOrganiser_v1">View README</a></span>
+ </div>
 
-        
-    </div>
-    </div>
+
+
+ </div>
 
     <div class="text-column">
         <h1 id="project-title">Unity Asset Organiser v.1</h1>
