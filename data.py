@@ -64,7 +64,17 @@ PROJECTS = [
         'Demo': None,
         'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
         'selected': False,
+    },
 
+
+     {
+        'name': "Anti Air Heroes", 
+        'description': "A 2D, tap-to-shoot mobile game developed for android.",
+        'mainImage': "placeholder-image.jpg",
+        'hasDemo': False,
+        'Demo': None,
+        'tools': [ "C#", "Unity 2017"],
+        'selected': False,
     }
 
 ]

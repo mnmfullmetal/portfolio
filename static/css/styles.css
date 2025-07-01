@@ -27,10 +27,20 @@ main {
     scroll-margin-top: var(--header-height);
     background-color: #0b001f;
     height: auto;
-    min-height: 100vh;
+    min-height: 120vh;
     width: auto;  
     font-size: 1.1rem;
 
+}
+
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ li{
+    padding: 0.5rem 0 0.5rem 0;
 }
 
  
@@ -169,14 +179,6 @@ header {
     min-height: 50vh; 
 }
 
-.scroll-section ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-.scroll-section li{
-    padding: 0.5rem 0 0.5rem 0;
-}
 
 
 #split-nav-text {
@@ -366,7 +368,8 @@ header {
 #projects-header{
     color:#f2f2f2;
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
 }
 
 #projects-page-container {
@@ -742,6 +745,13 @@ body::before {
         margin-left: 0;  
         width: 100%;      
         padding: 2rem;    
+    }
+
+
+     .split-layout-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 
     
