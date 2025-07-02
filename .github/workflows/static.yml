@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Specifies the path to the dist folder at the root level
-          path: 'portfolio/dist'
+          path: './dist'
   
   # The 'deploy' job
   deploy:
