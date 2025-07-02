@@ -2,7 +2,7 @@
 
 PROJECTS = [
     {
-        'name': "Unity Asset Organiser v.1", 
+        'name': "Unity Asset Organiser 1.0", 
         'description': "A custom Unity editor tool designed to enforce project organisational standards and streamline development by eliminating tedious manual asset sorting.",
         'mainImage': "asset-organiser-main.jpg",
         'hasDemo': False,
@@ -75,6 +75,7 @@ PROJECTS = [
         'Demo': None,
         'tools': [ "C#", "Unity 2017"],
         'selected': False,
+         'pagePath': "anti-air-heroes.html"
     }
 
 ]

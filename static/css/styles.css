@@ -754,7 +754,7 @@ body::before {
 
      .split-layout-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
     }
 
@@ -767,12 +767,20 @@ body::before {
     .thumbnail-img{
         width: 100px; 
         height: auto;
-        flex: 1 0 100px;
     }
 
     #project-card-container {
     flex-direction: column;
 }
+
+#content-links, #content-links a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
 
 
 #project-card-details,
