@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %} Portfolio 1.0 {% endblock %}
+
+{% block content %}
+<div class="split-layout-container">
+
+
+    <div class="video-column">
+       <div id="preview-viewer" ondblclick="openModalForCurrent()">
+            </div>
+
+        <div class="gallery">
+            <img class="thumbnail-img" src="static/images/portfolio-main.jpg" onclick="updatePreview(1)" alt="MG LOGO">
+
+            <img class="thumbnail-img" src="static/images/MGLogo.jpeg" onclick="updatePreview(2)" alt="MG LOGO">
+
+           
+        </div>
+
+        <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+
+      <div class="mySlides">
+      <div class="numbertext">1 / 2</div>
+    <img src="static/images/portfolio-main.jpg" alt="MG LOGO">
+      <div class="text">MG Logo </div>
+    </div>
+
+      <div class="mySlides">
+      <div class="numbertext">2 / 2</div>
+    <img src="static/images/MGLogo.jpeg" alt="MG LOGO">
+      <div class="text">MG Logo </div>
+    </div>
+
+   
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>        
+    </div>
+
+
+
+ </div>
+
+    <div class="text-column">
+        <h1 id="project-title">Portfolio 1.0</h1>
+        <hr>
+       <p><span id="highlighted-word"> <strong>Role:</strong></span> Solo Developer</p>
+
+       <p><span id="highlighted-word"> <strong>Description: </strong></span>  This portfolio is a custom-built static website designed from the ground up to serve as a central hub for my work. It showcases my projects, skills, and journey as a developer in a clean, responsive, and user-friendly format. The site was built using a combination of foundational web technologies and a Python-based static site generator to streamline development and ensure maintainability.</p>
+         <ul>
+          <li><span id="highlighted-word"> <strong>HTML5 & CSS3: </strong></span> Utilized for creating a semantic, well-structured layout and a modern, fully responsive design that adapts to all screen sizes.</li>
+          <li><span id="highlighted-word"> <strong>JavaScript: </strong> </span>  Implemented to introduce interactive elements and enhance the overall user experience.</li>
+          <li><span id="highlighted-word"> <strong>Python & Jinja2: </strong></span>A custom Python script leverages the Jinja2 templating engine to programmatically generate the static HTML pages. This allows for reusable components (like project cards, headers, and footers) and makes content management efficient.</li>
+          <li><span id="highlighted-word"> <strong>GitHub Pages: </strong></span>The website is deployed and hosted on GitHub Pages for fast, reliable, and secure delivery.</li>
+
+         </ul>
+         <p>As the sole creator of this site, I was responsible for the entire development lifecycle, from the initial UI/UX design and wireframing to the final deployment. This project itself is a direct demonstration of my skills in front-end development and my ability to implement a practical back-end scripting solution for web automation.</p>
+
+        
+    </div>
+
+</div>
+
+{% endblock %}
+

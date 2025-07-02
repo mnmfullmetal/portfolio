@@ -57,20 +57,22 @@ PROJECTS = [
     },
 
     {
-        'name': "Personal Website v.1", 
+        'name': "Portfolio Website 1.0", 
         'description': "blah blah blah blah",
-        'mainImage': "placeholder-image.jpg",
+        'mainImage': "portfolio-main.jpg",
         'hasDemo': True,
         'Demo': None,
         'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
         'selected': False,
+         'pagePath': "portfolio-1.0.html"
+
     },
 
 
      {
         'name': "Anti Air Heroes", 
         'description': "A 2D, tap-to-shoot mobile game developed for android.",
-        'mainImage': "placeholder-image.jpg",
+        'mainImage': "aa-heroes-main.jpg",
         'hasDemo': False,
         'Demo': None,
         'tools': [ "C#", "Unity 2017"],
