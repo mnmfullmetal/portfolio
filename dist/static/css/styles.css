@@ -4,8 +4,9 @@ a {
     text-decoration: none;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 hr{
@@ -616,9 +617,9 @@ body::before {
 .fullscreen-iframe {
      width: 100vw; 
      height: 100vh; 
-     border: none;   
 
 }
+
 
 
 .split-layout-container.contact-layout {
@@ -733,6 +734,11 @@ body::before {
 .submit-btn:active {
     transform: translateY(-1px);
 }
+
+
+
+
+
 
 
 /* Media Queries and Animations */

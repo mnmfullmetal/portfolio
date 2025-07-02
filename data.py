@@ -42,6 +42,19 @@ PROJECTS = [
 
     },
 
+
+        {
+        'name': "Portfolio Website 1.0", 
+        'description': "blah blah blah blah",
+        'mainImage': "portfolio-main.jpg",
+        'hasDemo': True,
+        'Demo': None,
+        'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
+        'selected': False,
+         'pagePath': "portfolio-1.0.html"
+
+    },
+
     {
         'name': "Velocity VR", 
         'description': "A survival horror VR game designed for the HTC Vive",
@@ -56,17 +69,7 @@ PROJECTS = [
 
     },
 
-    {
-        'name': "Portfolio Website 1.0", 
-        'description': "blah blah blah blah",
-        'mainImage': "portfolio-main.jpg",
-        'hasDemo': True,
-        'Demo': None,
-        'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
-        'selected': False,
-         'pagePath': "portfolio-1.0.html"
 
-    },
 
 
      {
