@@ -168,7 +168,7 @@ header {
 }
 
 #split-nav-content {
-     padding: 4rem 5rem 5rem 10rem;
+     padding: 4rem 4rem 5rem 6rem;
     color: #f2f2f2;
 }
 
@@ -242,7 +242,6 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 900px;
     color: #f2f2f2;
     border: solid 1px #36e5ae2e;
     box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), 
