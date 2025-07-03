@@ -1,15 +1,12 @@
-# Name of the workflow
+
 name: Deploy Python Static Site to Pages
 
 on:
-  # This workflow runs on any push to the 'main' branch
   push:
     branches: ["main"]
 
-  # This allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets the necessary permissions for the workflow to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -20,47 +17,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checks out your repository's code
       - name: Checkout
         uses: actions/checkout@v4
-
-      # 2. Sets up the specific version of Python
+        
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # 3. Installs the Python packages your build script needs
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install Jinja2 livereload
 
-      # 4. Runs your build script to generate the /dist folder
       - name: Build static site
-        # Runs only the build() function from your app.py script
-        # This prevents the live-reload server from starting and stalling the workflow.
         run: python -c "import app; app.build()"
 
-      # 5. Prepares the generated /dist folder for deployment
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Specifies the path to the dist folder at the root level
           path: './dist'
   
   # The 'deploy' job
   deploy:
-    # Requires the 'build' job to succeed first
     needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # 6. Deploys the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
