@@ -19,8 +19,6 @@ PROJECTS = [
         'selected': True,
         'pagePath': "mech-occult.html"
 
-        
-
 
     },
 
@@ -39,7 +37,7 @@ PROJECTS = [
 
         {
         'name': "Portfolio Website 1.0", 
-        'description': "blah blah blah blah",
+        'description': "The first version of my portfolio website, built to showcase my projects and skills.",
         'mainImage': "portfolio-main.jpg",
         'tools': ["HTML", "CSS", "JavaScript", "Python", "Jinja2"],
         'selected': False,
