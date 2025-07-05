@@ -157,10 +157,13 @@ const App = {
           }
       };
       document.querySelectorAll('#project-card-container').forEach(container => {
-          const title = container.querySelector('#project-card-title');
+          const title = container.querySelector('#project-card-tool');
           if (title) {
               container.addEventListener('mouseover', () => scrambleOnHover(title));
               container.addEventListener('mouseleave', () => resetText(title));
+          }
+          else {
+              console.warn("No title found in project card container.");
           }
       });
       this.scramble = scrambleOnHover;
