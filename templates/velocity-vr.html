@@ -4,26 +4,14 @@
 
 {% block content %}
 
-<div class="video-container">
-    <video autoplay loop muted playsinline poster="static/images/placeholder-image.jpg" id="bg-video">
-        <source src="static/videos/velocityvr-monster2.mp4" type="video/mp4">
-    </video>
+<div class="split-layout-container">
 
-    <div class="overlay-content-wrapper">
+  <div class="video-column">
 
-        <div class="text-overlay">
-            <h1 id="project-title">Velocity VR</h1>
-            <hr>
-            <p>Velocity VR is a survival horror VR game that places the player on an abandoned colony space craft, wheelchair bound the player must escape the ship while evading the enemy AI, an intelligent and hostile extraterrestrial that is determined to wipe out all life forms onboard.</p>
-    <p>As the project lead, I guided a team of five fellow students—three programmers and two artists—through a 14-week development cycle to create a compelling survival horror VR experience. This project, a core component of my AIE Design course, challenged us to master VR development for the first time. We successfully delivered a polished game where players, confined to a wheelchair, must navigate an abandoned spacecraft and evade a sophisticated enemy AI. "Velocity VR" was a testament to our team's rapid learning, effective scope management, and collaborative spirit. Leading this talented team to a successful launch was a deeply rewarding experience and a highlight of my time at AIE.</p>      
-
-        </div>
-        
-
-        <div id="preview-viewer" ondblclick="openModalForCurrent()">
+      <div id="preview-viewer" ondblclick="openModalForCurrent()">
             </div>
 
-        <div class="on-video-gallery">
+        <div class="gallery">
             <img class="thumbnail-img" src="static/images/velocityvr-banner.jpg" onclick="updatePreview(1)" alt="Velocity VR Banner">
             <img class="thumbnail-img" src="static/images/velocityvr-screenshot.jpg" onclick="updatePreview(2)" alt="Monster Video Thumbnail">
             <img class="thumbnail-img" src="static/images/shottyscreenshot.jpg" onclick="updatePreview(3)" alt="Shotgun Video Thumbnail">
@@ -38,16 +26,10 @@
             <img class="thumbnail-img" src="static/images/velocityvr-ship7.png" onclick="updatePreview(12)" alt="Ship corridor 7">
             <img class="thumbnail-img" src="static/images/velocityvr-deathscreen.png" onclick="updatePreview(13)" alt="Game Over Screen">
         </div>
-        
-    </div>
-</div>
 
-
-
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
 
     <div class="mySlides">
       <div class="numbertext">1 / 13</div>
@@ -135,10 +117,29 @@
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
   </div>
+  </div>
+</div>
+
+<div class="text-column">
+        <h1 id="project-title">Velocity VR</h1>
+        <hr>
+
+        <p><span id="highlighted-word"><strong>Role: </strong></span> Project Lead & Designer</p>
+        <p><span id="highlighted-word"><strong>Description: </strong></span>Velocity VR is a survival horror game that immerses players in the chilling atmosphere of an abandoned colony spacecraft. Uniquely, players are confined to a wheelchair, forcing them to rely on strategy and stealth to navigate the ship and escape. The primary obstacle is a single, intelligent, and hostile extraterrestrial AI that relentlessly hunts the player, creating a tense and deeply personal horror experience. This game was developed over a 14-week cycle as a core project for my AIE Design course.</p>
+        <ul>
+        <li><span id="highlighted-word"><strong>Immersive VR Horror: </strong></span> Built from the ground up for virtual reality to maximize immersion and suspense.</li>
+        <li><span id="highlighted-word"><strong>Unique Locomotion: </strong></span>The wheelchair-bound mechanic creates a distinct and challenging gameplay experience, focusing on vulnerability and careful navigation rather than direct combat.</li>
+        <li><span id="highlighted-word"><strong>Advanced Enemy AI: </strong> </span> Players are stalked by a single, sophisticated enemy that learns and adapts, ensuring no two playthroughs are the same.</li>
+        <li><span id="highlighted-word"><strong>Atmospheric Storytelling: </strong></span> The abandoned spacecraft serves as a desolate, narrative-rich environment that players must explore to uncover the story and find a path to escape.</li>
+        </ul>
+        <p>As the Project Lead, I guided a team of five students (three programmers, two artists) through their first VR development experience. My responsibilities included defining the project vision, managing the development scope to fit our 14-week timeline, facilitating communication between disciplines, and ensuring we delivered a polished final product. Leading this talented team to create a successful and compelling game was a highlight of my time at AIE and a testament to our effective collaboration and rapid skill acquisition.</p>
+        
+    </div>
 
 
- 
+
 </div>
 
 

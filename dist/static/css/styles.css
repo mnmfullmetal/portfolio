@@ -169,7 +169,7 @@ header {
 }
 
 #split-nav-content {
-     padding: 4rem 4rem 5rem 6rem;
+     padding: 4rem 6rem 5rem 6rem;
     color: #f2f2f2;
 }
 
@@ -183,6 +183,7 @@ header {
 
 
 #split-nav-text {
+
     color: #f2f2f2;
 }
 
@@ -226,17 +227,19 @@ header {
 }
 
 #split-nav-socials{
-    margin-top: 20vh;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #split-nav-socials a{
-    margin-left: 10px;
+    margin-right: 1.5rem;
 }
 
-
-
-
-
+ 
 
 #project-card-container {
     margin-top: 5vh;
@@ -244,9 +247,9 @@ header {
     flex-direction: row;
     width: 100%;
     color: #f2f2f2;
-    border: solid 1px #36e5ae2e;
-    box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), 
-                0 0 8px rgba(220, 200, 255, 0.2);   
+     border: 2px solid #36e5ae4a;
+    box-shadow: 0 0 30px rgba(54, 229, 174, 0.2);
+    transition: all 0.3s ease-in-out; 
 
 
 }
@@ -256,11 +259,9 @@ header {
     cursor: pointer;    
      border-style: solid;
     border-color: #36e5ae;
-    border-width: 2px;
     border-radius: 8px; 
-     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(180, 160, 255, 0.15), 
-                0 0 8px rgba(220, 200, 255, 0.2);   
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(54, 229, 174, 0.4);
 }
 
 
@@ -302,7 +303,6 @@ header {
 #project-card-image-container{
     padding: 2rem;
     width: 40%;
-    max-height: 350px;
 }
 
 
@@ -375,8 +375,8 @@ body::before {
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
-    width: 60rem;
-    height: 60rem;
+    width: 50rem;
+    height: 50rem;
     background: radial-gradient(circle, #2b01794a 0%, rgba(209, 38, 189, 0) 70%);
     border-radius: 50%;
     pointer-events: none;
@@ -475,7 +475,7 @@ body::before {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
     border-radius: 8px;
     backdrop-filter: blur(5px);
@@ -584,6 +584,7 @@ body::before {
     gap: 3rem; 
     width: 90%;
     max-width: 1400px;
+    padding-bottom: 3rem;
     margin: 4rem auto 0 auto ; 
 }
 
@@ -821,6 +822,10 @@ body::before {
         width: 90%;      
         padding: 2rem;  
     }
+
+    #split-nav-text{
+        padding: 0.5rem;
+    }
     
     #split-nav-text h1{
         font-size: 3rem; 
@@ -832,9 +837,8 @@ body::before {
     }
 
     #split-nav-content {
-        margin-left: 0;  
         width: 100%;      
-        padding: 2rem;    
+        padding: 0.5rem;    
     }
 
 
