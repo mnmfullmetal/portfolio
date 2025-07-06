@@ -44,7 +44,7 @@ const App = {
 
         const previewViewer = document.getElementById("preview-viewer");
         const slideToShow = slides[index - 1];
-        const mediaElement = slideToShow.querySelector('img, video');
+        const mediaElement = slideToShow.querySelector('img, video, iframe');
         if (!mediaElement) return;
 
         const clonedMedia = mediaElement.cloneNode(true);
