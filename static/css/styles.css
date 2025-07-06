@@ -28,7 +28,7 @@ main {
     scroll-margin-top: var(--header-height);
     background-color: #0b001f;
     height: auto;
-    min-height: 100vh;
+    min-height: 150vh;
     width: auto;  
     font-size: 1.1rem;
 
@@ -169,14 +169,14 @@ header {
 }
 
 #split-nav-content {
-     padding: 4rem 6rem 5rem 6rem;
+     padding: 4rem 6rem 4rem 6rem;
     color: #f2f2f2;
 }
 
 
 #split-nav-content section {
     scroll-margin-top: calc(var(--header-height) + 1rem);
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
     min-height: 50vh; 
 }
 
@@ -254,6 +254,7 @@ header {
 
 }
 
+
 #project-card-container:hover{
     background-color:#1a0e36;
     cursor: pointer;    
@@ -329,9 +330,13 @@ object-fit: cover;
 }
 
 #about{
-    padding-left: 2rem;
+    padding: 2rem;
 }
 
+#resume{
+    padding: 2rem;
+
+}
 #projects-header{
     color:#f2f2f2;
     text-align: center;
@@ -749,7 +754,7 @@ body::before {
 
 /* Media Queries and Animations */
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1023px) {
    
     .topnav > .social-tab {
         display: flex;       
@@ -819,13 +824,17 @@ body::before {
 
     #split-nav {
         position: static; 
-        width: 90%;      
         padding: 2rem;  
     }
 
-    #split-nav-text{
+    #about {
+       padding: 0.5rem;
+    }
+
+    #resume {
         padding: 0.5rem;
     }
+   
     
     #split-nav-text h1{
         font-size: 3rem; 
@@ -866,15 +875,9 @@ body::before {
     flex-direction: column;
     align-items: center;
     margin: 1rem 0 0.5rem 0;
-}
+}  
 
- 
-   
-}
-
-@media screen and (max-width: 1300px){
-
-     .video-container {
+ .video-container {
         display: flex;
         flex-direction: column;
         height: auto;
@@ -951,8 +954,10 @@ body::before {
     }
 
 
-    
+
+
 }
+
 
 
 

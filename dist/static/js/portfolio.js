@@ -176,7 +176,7 @@ const App = {
     if (navLinks.length === 0 || sections.length === 0) return;
     const observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -60% 0px',
+        rootMargin: '-20% 0px -20% 0px',
         threshold: 0.1
     };
     const observer = new IntersectionObserver((entries) => {
