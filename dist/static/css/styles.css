@@ -266,6 +266,8 @@ header {
 }
 
 
+
+
 #project-card-container:hover #project-card-title{
     color: #d126bd;
     transition: color 0.2s ease-in-out;
@@ -312,7 +314,7 @@ header {
  width: 100%;
  min-height: 130px;
  max-height: 100%;
-object-fit: cover;
+object-fit: contain;
 
 
 }
