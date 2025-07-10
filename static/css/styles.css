@@ -955,6 +955,12 @@ body::before {
         text-align: center;
     }
 
+    #projects-page-container{
+        margin: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
 
 
 
