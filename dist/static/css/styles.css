@@ -303,6 +303,10 @@ header {
     width: 60%;
 }
 
+#project-description{
+       color: #a9a9a9; 
+}
+
 #project-card-image-container{
     padding: 2rem;
     width: 40%;

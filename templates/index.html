@@ -52,7 +52,7 @@
                    <div id="project-card-container">
                   <div id="project-card-details">
                   <h2 id="project-card-title" >{{project.name}}</h2>
-                  <p>{{project.description}}</p>
+                  <p id="project-description">{{project.description}}</p>
                   {% for tool in project.tools %}
                   <span id="project-card-tool"  data-value="{{project.tool}}">{{tool}}</span>
                   {% endfor %}
