@@ -1,88 +1,140 @@
-{% extends "base.html"%}
-
-{% block title %} Myles Gillard {% endblock %}
-
-{% block content %}
+{% extends "base.html"%} {% block title %} Myles Gillard {% endblock %} {% block
+content %}
 <div id="split-nav-container">
-
-   <div id="split-nav">
-
-      <div id="split-nav-text">
-        <h1 id="split-nav-title">Myles Gillard</h1>
-        <h4>Video Game & Software Developer</h4>
-        <hr>
-        <p>Building engaging worlds and intuitive software, from concept to code.</p>
-      </div>
-      <div id="split-nav-links">
-        <a href="#about" class="nav-link-scramble" data-value="About">About</a>
-        <a href="#projects" class="nav-link-scramble" data-value="Projects">Projects</a>
-        <a href="#resume" class="nav-link-scramble" data-value="Experience">Experience</a>
-      </div>
-        <div id="split-nav-socials">
-           <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
-          <a
-            href="https://linkedin.com/in/mylesgillard"
-            class="fa-brands fa-linkedin"
-          ></a>
-            <a href="contact.html" class="fa-brands fa-x-twitter"></a>
-          <a href="contact.html" class="fa fa-envelope"></a>
-      </div>
+  <div id="split-nav">
+    <div id="split-nav-text">
+      <h1 id="split-nav-title">Myles Gillard</h1>
+      <h4>Video Game & Software Developer</h4>
+      <hr />
+      <p>
+        Building engaging worlds and intuitive software, from concept to code.
+      </p>
     </div>
-
-    <div id="split-nav-content">
-
-         <section id="about" class="scroll-section">
-                <p>As a video game and software developer from Sydney with nearly a decade of product design and programming experience, I bridge the gap between creative vision and technical execution. My passion lies in the entire development lifecycle, from initial design to final deployment across multiple platforms.</p>
-                <p>My core technical expertise lies in C# and the .NET framework, complemented by extensive experience in a variety of languages and technologies essential for modern development:</p>
-                <ul>
-                  <li><span id="highlighted-word"><strong>Primary Languages:</strong></span> C#, C/C++</li>
-                  <li><span id="highlighted-word"><strong>Web & Scripting:</strong></span> Python, JavaScript, HTML, CSS, Jinja2</li>
-                  <li><span id="highlighted-word"><strong>Engines & Frameworks:</strong></span> .NET, Django, Flask, Unity, Unreal</li>
-                  <li><span id="highlighted-word"><strong>Tools:</strong></span> Git, Perforce, Maya, Blender, Photoshop, GIMP, Krita </li>
-                  <li><span id="highlighted-word"><strong>Platforms:</strong></span> PC, Mobile, Web, VR/AR</li>
-                </ul>
-                <p>Throughout my career, I've thrived on the unique challenges each project presents. This has allowed me to continuously refine my skills, adapt to new pipelines, and excel as a collaborative team member. I am driven by the challenge of creating memorable and engaging experiences for users.</p>
-                <p>I'm always excited to connect and build the next great thing. Follow my journey and feel free to connect with me on my socials!</p>           
-         </section>
-
-            <section id="projects" class="scroll-section">
-                {% for project in projects %}
-                {% if project.selected %}
-                <a href="{{project.pagePath}}" id="project-card">
-                   <div id="project-card-container">
-                  <div id="project-card-details">
-                  <h2 id="project-card-title" >{{project.name}}</h2>
-                  <p id="project-description">{{project.description}}</p>
-                  {% for tool in project.tools %}
-                  <span id="project-card-tool"  data-value="{{project.tool}}">{{tool}}</span>
-                  {% endfor %}
-                  </div>
-                  <div id="project-card-image-container">
-                    <img src="static/images/{{ project.mainImage }}" alt="IMG HERE">
-                  </div>
-                </div>
-                </a>
-                {% endif %}
-                {% endfor %}
-                <div id="content-links">
-                <a id="highlighted-word" href="projects.html">View All Projects</a>
-
-                </div>
-            </section>
-            <section id="resume" class="scroll-section">
-                <h1>Experience</h1>
-                <p>My passion for development began at young age during a holiday game development course, and I have since cultivated <span id="highlighted-word">8 years of hands-on experience</span>  across the entire development lifecycle. My formal education includes a year of immersive experience in two simulated <span id="highlighted-word">agile studio environments</span>. I have a <span id="highlighted-word">proven ability to adapt and learn</span>, with a portfolio of personal projects spanning diverse languages, frameworks, and technologies.</p>
-                <p>Please view my resume below for a full history of my employment and education.</p>
-                
-                <div id="content-links">
-                  <a id="highlighted-word" href="static/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
-                  <a id="highlighted-word" href="static/pdf/resume.pdf" download>Download Resume</a>
-                </div>
-  
-
-            </section>
+    <div id="split-nav-links">
+      <a href="#about" class="nav-link-scramble" data-value="About">About</a>
+      <a href="#projects" class="nav-link-scramble" data-value="Projects"
+        >Projects</a
+      >
+      <a href="#resume" class="nav-link-scramble" data-value="Experience"
+        >Experience</a
+      >
     </div>
+    <div id="split-nav-socials">
+      <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
+      <a
+        href="https://linkedin.com/in/mylesgillard"
+        class="fa-brands fa-linkedin"
+      ></a>
+      <a href="https://github.com/mnmfullmetal" class="fa-brands fa-github"></a>
+      <a href="contact.html" class="fa fa-envelope"></a>
+    </div>
+  </div>
+
+  <div id="split-nav-content">
+    <section id="about" class="scroll-section">
+      <p>
+        As a video game and software developer from Sydney with nearly a decade
+        of product design and programming experience, I bridge the gap between
+        creative vision and technical execution. My passion lies in the entire
+        development lifecycle, from initial design to final deployment across
+        multiple platforms.
+      </p>
+      <p>
+        My core technical expertise lies in C# and the .NET framework,
+        complemented by extensive experience in a variety of languages and
+        technologies essential for modern development:
+      </p>
+      <ul>
+        <li>
+          <span id="highlighted-word"><strong>Primary Languages:</strong></span>
+          C#, C/C++
+        </li>
+        <li>
+          <span id="highlighted-word"><strong>Web & Scripting:</strong></span>
+          Python, JavaScript, HTML, CSS, Jinja2
+        </li>
+        <li>
+          <span id="highlighted-word"
+            ><strong>Engines & Frameworks:</strong></span
+          >
+          .NET, Django, Flask, Unity, Unreal
+        </li>
+        <li>
+          <span id="highlighted-word"><strong>Tools:</strong></span> Git,
+          Perforce, Maya, Blender, Photoshop, GIMP, Krita
+        </li>
+        <li>
+          <span id="highlighted-word"><strong>Platforms:</strong></span> PC,
+          Mobile, Web, VR/AR
+        </li>
+      </ul>
+      <p>
+        Throughout my career, I've thrived on the unique challenges each project
+        presents. This has allowed me to continuously refine my skills, adapt to
+        new pipelines, and excel as a collaborative team member. I am driven by
+        the challenge of creating memorable and engaging experiences for users.
+      </p>
+      <p>
+        I'm always excited to connect and build the next great thing. Follow my
+        journey and feel free to connect with me on my socials!
+      </p>
+    </section>
+
+    <section id="projects" class="scroll-section">
+      {% for project in projects %} {% if project.selected %}
+      <a href="{{project.pagePath}}" id="project-card">
+        <div id="project-card-container">
+          <div id="project-card-details">
+            <h2 id="project-card-title">{{project.name}}</h2>
+            <p id="project-description">{{project.description}}</p>
+            {% for tool in project.tools %}
+            <span id="project-card-tool" data-value="{{project.tool}}"
+              >{{tool}}</span
+            >
+            {% endfor %}
+          </div>
+          <div id="project-card-image-container">
+            <img src="static/images/{{ project.mainImage }}" alt="IMG HERE" />
+          </div>
+        </div>
+      </a>
+      {% endif %} {% endfor %}
+      <div id="content-links">
+        <a id="highlighted-word" href="projects.html">View All Projects</a>
+      </div>
+    </section>
+    <section id="resume" class="scroll-section">
+      <h1>Experience</h1>
+      <p>
+        My passion for development began at young age during a holiday game
+        development course, and I have since cultivated
+        <span id="highlighted-word">8 years of hands-on experience</span> across
+        the entire development lifecycle. My formal education includes a year of
+        immersive experience in two simulated
+        <span id="highlighted-word">agile studio environments</span>. I have a
+        <span id="highlighted-word">proven ability to adapt and learn</span>,
+        with a portfolio of personal projects spanning diverse languages,
+        frameworks, and technologies.
+      </p>
+      <p>
+        Please view my resume below for a full history of my employment and
+        education.
+      </p>
+
+      <div id="content-links">
+        <a
+          id="highlighted-word"
+          href="static/pdf/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View Resume</a
+        >
+        <a id="highlighted-word" href="static/pdf/resume.pdf" download
+          >Download Resume</a
+        >
+      </div>
+    </section>
+  </div>
 </div>
-     
-{% endblock %}
 
+{% endblock %}
