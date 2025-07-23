@@ -1,27 +1,26 @@
-{% extends "base.html" %}
-
-{% block title %} Projects {% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Projects {% endblock %} {% block
+content %}
 <div id="projects-header">
   <h1>My Projects</h1>
 </div>
 <div id="projects-page-container">
-{% for project in projects %}
-<a href="{{project.pagePath}}" id="project-card">
-                   <div id="project-card-container">
-                  <div id="project-card-details">
-                  <h2 id="project-card-title" data-value="{{project.name}}">{{project.name}}</h2>
-                  <p id="project-description">{{project.description}}</p>
-                  {% for tool in project.tools %}
-                  <span id="project-card-tool">{{tool}}</span>
-                  {% endfor %}
-                  </div>
-                  <div id="project-card-image-container">
-                    <img src="static/images/{{ project.mainImage }}" alt="IMG HERE">
-                  </div>
-                </div>
-                </a>
-{% endfor %}
+  {% for project in projects %}
+  <a href="{{project.pagePath}}" id="project-card">
+    <div id="project-card-container">
+      <div id="project-card-details">
+        <h2 id="project-card-title" data-value="{{project.name}}">
+          {{project.name}}
+        </h2>
+        <p id="project-description">{{project.description}}</p>
+        {% for tool in project.tools %}
+        <span id="project-card-tool">{{tool}}</span>
+        {% endfor %}
+      </div>
+      <div id="project-card-image-container">
+        <img src="static/images/{{ project.mainImage }}" alt="IMG HERE" />
+      </div>
+    </div>
+  </a>
+  {% endfor %}
 </div>
 {% endblock %}

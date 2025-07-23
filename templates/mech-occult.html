@@ -1,150 +1,310 @@
-{% extends "base.html" %}
-
-{% block title %} Mech-Occult {% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Mech-Occult {% endblock %} {% block
+content %}
 <div class="split-layout-container">
+  <div class="video-column">
+    <div id="preview-viewer" ondblclick="openModalForCurrent()"></div>
 
-    <div class="video-column">
-       <div id="preview-viewer" ondblclick="openModalForCurrent()">
-            </div>
+    <div class="gallery">
+      <img
+        class="thumbnail-img"
+        src="static/images/mech-occult-gameplayscreenshot.jpg"
+        onclick="updatePreview(1)"
+        alt="Mech-occult gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/mech-occult-gameplay.jpg"
+        onclick="updatePreview(2)"
+        alt="Mech-occult gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/mech-occult-gameplay2.jpg"
+        onclick="updatePreview(3)"
+        alt="Mech-occult gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/flashscreenshot.jpg"
+        onclick="updatePreview(4)"
+        alt="Bullet impact effect made with VFX Graph"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/ImpactVFXGraph.jpg"
+        onclick="updatePreview(5)"
+        alt="Bullet impact effect made with VFX Graph"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/levelupscreenshot.jpg"
+        onclick="updatePreview(6)"
+        alt="Level-up effect made with Unity particle systems"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/muzzlescreenshot.jpg"
+        onclick="updatePreview(7)"
+        alt="Muzzle flash effect made with VFX Graph"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/MuzzleFlashVFXgraph.jpg"
+        onclick="updatePreview(8)"
+        alt="Muzzle flash effect made with VFX Graph"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/shieldscreenshot.jpg"
+        onclick="updatePreview(9)"
+        alt="Shield effect made with VFX Graph"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/spawnscreenshot.jpg"
+        onclick="updatePreview(10)"
+        alt="Spawn effect made with Unity particle systems"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/spawnscreenshot2.jpg"
+        onclick="updatePreview(11)"
+        alt="Spawn effect made with Unity particle systems"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/gameplayscreenshot2.jpg"
+        onclick="updatePreview(12)"
+        alt="Mech-occult gameplay - Dithering effect"
+      />
+    </div>
 
-        <div class="gallery">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplayscreenshot.jpg" onclick="updatePreview(1)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplay.jpg" onclick="updatePreview(2)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/mech-occult-gameplay2.jpg" onclick="updatePreview(3)" alt="Mech-occult gameplay">
-            <img class="thumbnail-img" src="static/images/flashscreenshot.jpg" onclick="updatePreview(4)" alt="Bullet impact effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/ImpactVFXGraph.jpg" onclick="updatePreview(5)" alt="Bullet impact effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/levelupscreenshot.jpg" onclick="updatePreview(6)" alt="Level-up effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/muzzlescreenshot.jpg" onclick="updatePreview(7)" alt="Muzzle flash effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/MuzzleFlashVFXgraph.jpg" onclick="updatePreview(8)" alt="Muzzle flash effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/shieldscreenshot.jpg" onclick="updatePreview(9)" alt="Shield effect made with VFX Graph">
-            <img class="thumbnail-img" src="static/images/spawnscreenshot.jpg" onclick="updatePreview(10)" alt="Spawn effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/spawnscreenshot2.jpg" onclick="updatePreview(11)" alt="Spawn effect made with Unity particle systems">
-            <img class="thumbnail-img" src="static/images/gameplayscreenshot2.jpg" onclick="updatePreview(12)" alt="Mech-occult gameplay - Dithering effect">
-            
-         
+    <div id="content-links">
+      <span
+        ><a id="highlighted-word" href="mech-occult-demo.html"
+          >Play The Demo Here.</a
+        ></span
+      >
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/CsrNxzVnxkk?autoplay=1&mute=1&loop=1&playlist=CsrNxzVnxkk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text">Mech-occult gameplay</div>
         </div>
 
-        <div id= "content-links">
-  <span id=><a id="highlighted-word" href="mech-occult-demo.html">Play The Demo Here.</a></span>
-         </div>
-
-        <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    
-
-
-      <div class="mySlides">
-      <div class="numbertext">1 / 12</div>
-      <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/CsrNxzVnxkk?autoplay=1&mute=1&loop=1&playlist=CsrNxzVnxkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <div class="text">Mech-occult gameplay</div>
-    </div>
-
-
-     <div class="mySlides">
-      <div class="numbertext">2 / 12</div>
-      <img src="static/images/mech-occult-gameplay.jpg" style="width:100%">
-      <div class="text">Mech-occult gameplay</div>
-    </div>
-
-    
-     <div class="mySlides">
-      <div class="numbertext">3 / 12</div> 
-      <img src="static/images/mech-occult-gameplay2.jpg" style="width:100%">
-      <div class="text">Mech-occult gameplay</div>
-    </div>
-
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 12</div>
-    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/q2NUOaWPuxA?autoplay=1&mute=1&loop=1&playlist=q2NUOaWPuxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <div class="text">Bullet impact effect made with VFX Graph</div>
-    </div>
-
-    
-     <div class="mySlides">
-      <div class="numbertext">5 / 12</div>
-      <img src="static/images/ImpactVFXGraph.jpg" style="width:100%">
-      <div class="text">Bullet impact effect made with VFX Graph</div>
-    </div>
-
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 12</div>
-    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/7x76sqkXyu8?autoplay=1&mute=1&loop=1&playlist=7x76sqkXyu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <div class="text">Level-up effect made with Unity particle systems</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">7 / 12</div>
-          <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/rW8LWgg9CaU?autoplay=1&mute=1&loop=1&playlist=rW8LWgg9CaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-      <div class="text">Muzzle flash effect made with VFX Graph</div>
-    </div>
-
-
-     <div class="mySlides">
-      <div class="numbertext">8 / 12</div>
-      <img src="static/images/MuzzleFlashVFXgraph.jpg" style="width:100%">
-      <div class="text">Muzzle flash effect made with VFX Graph</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">9 / 12</div>
-       <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/dHniDvshyj8?autoplay=1&mute=1&loop=1&playlist=dHniDvshyj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-      <div class="text">Shield effect made with Shader Graph</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">10 / 12</div>
-            <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/8OnyYZhq2q0?autoplay=1&mute=1&loop=1&playlist=8OnyYZhq2q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-      <div class="text">Spawn effect made with Unity particle systems</div>
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">11 / 12</div>
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/-W7C3ahhHmw?autoplay=1&mute=1&loop=1&playlist=-W7C3ahhHmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-      <div class="text">Spawn effect made with Unity particle systems</div>
-    </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 12</div>
+          <img
+            src="static/images/mech-occult-gameplay.jpg"
+            style="width: 100%"
+          />
+          <div class="text">Mech-occult gameplay</div>
+        </div>
 
         <div class="mySlides">
-      <div class="numbertext">12 / 12</div>
-     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MoKs3R8m1IQ?autoplay=1&mute=1&loop=1&playlist=MoKs3R8m1IQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          <div class="numbertext">3 / 12</div>
+          <img
+            src="static/images/mech-occult-gameplay2.jpg"
+            style="width: 100%"
+          />
+          <div class="text">Mech-occult gameplay</div>
+        </div>
 
-     </iframe>
-      <div class="text">Mech-occult gameplay - Dithering effect</div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/q2NUOaWPuxA?autoplay=1&mute=1&loop=1&playlist=q2NUOaWPuxA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text">Bullet impact effect made with VFX Graph</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 12</div>
+          <img src="static/images/ImpactVFXGraph.jpg" style="width: 100%" />
+          <div class="text">Bullet impact effect made with VFX Graph</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/7x76sqkXyu8?autoplay=1&mute=1&loop=1&playlist=7x76sqkXyu8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="text">
+            Level-up effect made with Unity particle systems
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/rW8LWgg9CaU?autoplay=1&mute=1&loop=1&playlist=rW8LWgg9CaU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div class="text">Muzzle flash effect made with VFX Graph</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">8 / 12</div>
+          <img
+            src="static/images/MuzzleFlashVFXgraph.jpg"
+            style="width: 100%"
+          />
+          <div class="text">Muzzle flash effect made with VFX Graph</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">9 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/dHniDvshyj8?autoplay=1&mute=1&loop=1&playlist=dHniDvshyj8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div class="text">Shield effect made with Shader Graph</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">10 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/8OnyYZhq2q0?autoplay=1&mute=1&loop=1&playlist=8OnyYZhq2q0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div class="text">Spawn effect made with Unity particle systems</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">11 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/-W7C3ahhHmw?autoplay=1&mute=1&loop=1&playlist=-W7C3ahhHmw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div class="text">Spawn effect made with Unity particle systems</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">12 / 12</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/MoKs3R8m1IQ?autoplay=1&mute=1&loop=1&playlist=MoKs3R8m1IQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
+          <div class="text">Mech-occult gameplay - Dithering effect</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
     </div>
-    
-   
-
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-        
-    </div>
-    </div>
+  <div class="text-column">
+    <h1 id="project-title">Mech-Occult</h1>
+    <hr />
+    <p>
+      <span id="highlighted-word"> <strong>Role:</strong></span> Solo Developer
+    </p>
 
-    <div class="text-column">
-        <h1 id="project-title">Mech-Occult</h1>
-        <hr>
-       <p><span id="highlighted-word"> <strong>Role:</strong></span> Solo Developer</p>
-
-       <p><span id="highlighted-word"> <strong>Description: </strong></span> In the wake of a catastrophic containment breach at a top-secret military facility, unknowable horrors have been unleashed from the void. In Mech-Occult, a fast-paced isometric arena shooter, players control humanity's last, unlikely hope: a lone "Cleaner Droid." The mission is a desperate race against time to battle through desolate corridors, survive relentless waves of grotesque entities, and seal the breach before it consumes the world. This is a solo passion project currently in active development.</p>
-         <ul>
-          <li><span id="highlighted-word"> <strong>Intense Isometric Combat:</strong></span> Engage in frantic, top-down arena shooter action against overwhelming hordes of otherworldly monsters.</li>
-          <li><span id="highlighted-word"> <strong>Wave-Based Survival:</strong> </span> Test your skills and reflexes against increasingly difficult waves of enemies that demand quick thinking and stategic postioning.</li>
-          <li><span id="highlighted-word"> <strong>Playable Demo Available:</strong></span> A public demo offers a direct, hands-on preview of the core gameplay loop and the game's intense action.</li>
-         </ul>
-         <p>As the sole creator of Mech-Occult, this project is a rewarding journey of comprehensive skill development. I am responsible for all aspects of its creation, from the initial concept and game design to C# programming, enemy AI, and the implementation of all core gameplay mechanics. Development is ongoing as I continue to build out new features, content, and visual elements to fully realize the game's vision.</p>
-    </div>
-
+    <p>
+      <span id="highlighted-word"> <strong>Description: </strong></span> In the
+      wake of a catastrophic containment breach at a top-secret military
+      facility, unknowable horrors have been unleashed from the void. In
+      Mech-Occult, a fast-paced isometric arena shooter, players control
+      humanity's last, unlikely hope: a lone "Cleaner Droid." The mission is a
+      desperate race against time to battle through desolate corridors, survive
+      relentless waves of grotesque entities, and seal the breach before it
+      consumes the world. This is a solo passion project currently in active
+      development.
+    </p>
+    <ul>
+      <li>
+        <span id="highlighted-word">
+          <strong>Intense Isometric Combat:</strong></span
+        >
+        Engage in frantic, top-down arena shooter action against overwhelming
+        hordes of otherworldly monsters.
+      </li>
+      <li>
+        <span id="highlighted-word">
+          <strong>Wave-Based Survival:</strong>
+        </span>
+        Test your skills and reflexes against increasingly difficult waves of
+        enemies that demand quick thinking and stategic postioning.
+      </li>
+      <li>
+        <span id="highlighted-word">
+          <strong>Playable Demo Available:</strong></span
+        >
+        A public demo offers a direct, hands-on preview of the core gameplay
+        loop and the game's intense action.
+      </li>
+    </ul>
+    <p>
+      As the sole creator of Mech-Occult, this project is a rewarding journey of
+      comprehensive skill development. I am responsible for all aspects of its
+      creation, from the initial concept and game design to C# programming,
+      enemy AI, and the implementation of all core gameplay mechanics.
+      Development is ongoing as I continue to build out new features, content,
+      and visual elements to fully realize the game's vision.
+    </p>
+  </div>
 </div>
 {% endblock %}

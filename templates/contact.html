@@ -1,40 +1,65 @@
-{% extends "base.html" %}
-
-{% block title %} Contact {% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Contact {% endblock %} {% block
+content %}
 
 <div class="split-layout-container contact-layout">
-        
-        <div class="contact-form-column">
-            <h1 class="contact-page-title">Get in Touch</h1>
-            <p class="contact-page-subtitle">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
-                Fill out the form below, and I'll get back to you as soon as possible.
-            </p>
-          
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form-main">
-               <input type="hidden" name="access_key" value="67f6359d-6168-4f48-bec0-fccc42284455">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="_replyto" required placeholder="Enter a valid email address">
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="What's on your mind?"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
+  <div class="contact-form-column">
+    <h1 class="contact-page-title">Get in Touch</h1>
+    <p class="contact-page-subtitle">
+      I'm always open to discussing new projects, creative ideas, or
+      opportunities to be part of your visions. Fill out the form below, and
+      I'll get back to you as soon as possible.
+    </p>
 
-        <div class="contact-image-column">
-            <img src="static/images/portrait.jpg" alt="A professional photo of the site owner">
-        </div>
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="contact-form-main"
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value="67f6359d-6168-4f48-bec0-fccc42284455"
+      />
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your full name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          required
+          placeholder="Enter a valid email address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder="What's on your mind?"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
 
-    </div>
-      
+  <div class="contact-image-column">
+    <img
+      src="static/images/portrait.jpg"
+      alt="A professional photo of the site owner"
+    />
+  </div>
+</div>
+
 {% endblock %}

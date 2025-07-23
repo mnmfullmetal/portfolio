@@ -1,120 +1,173 @@
-{% extends "base.html" %}
-
-{% block title %} Anti Air Heroes {% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Anti Air Heroes {% endblock %} {%
+block content %}
 <div class="split-layout-container">
+  <div class="video-column">
+    <div id="preview-viewer" ondblclick="openModalForCurrent()"></div>
 
+    <div class="gallery">
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes1.jpg"
+        onclick="updatePreview(1)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes2.jpg"
+        onclick="updatePreview(2)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes3.jpg"
+        onclick="updatePreview(3)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes4.jpg"
+        onclick="updatePreview(4)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes5.jpg"
+        onclick="updatePreview(5)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes6.jpg"
+        onclick="updatePreview(6)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes7.jpg"
+        onclick="updatePreview(7)"
+        alt="Anti Air Heroes gameplay"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/aa-heroes8.jpg"
+        onclick="updatePreview(8)"
+        alt="Anti Air Heroes gameplay"
+      />
+    </div>
 
-    <div class="video-column">
-       <div id="preview-viewer" ondblclick="openModalForCurrent()">
-            </div>
-
-        <div class="gallery">
-            <img class="thumbnail-img" src="static/images/aa-heroes1.jpg" onclick="updatePreview(1)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes2.jpg" onclick="updatePreview(2)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes3.jpg" onclick="updatePreview(3)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes4.jpg" onclick="updatePreview(4)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes5.jpg" onclick="updatePreview(5)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes6.jpg" onclick="updatePreview(6)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes7.jpg" onclick="updatePreview(7)" alt="Anti Air Heroes gameplay">
-            <img class="thumbnail-img" src="static/images/aa-heroes8.jpg" onclick="updatePreview(8)" alt="Anti Air Heroes gameplay">
-
-           
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 8</div>
+          <img src="static/images/aa-heroes1.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
         </div>
-         
 
-        <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">2 / 8</div>
+          <img src="static/images/aa-heroes2.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
 
- <div class="mySlides">
-      <div class="numbertext">1 / 8</div>
-      <img src="static/images/aa-heroes1.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 8</div>
+          <img src="static/images/aa-heroes3.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 8</div>
+          <img src="static/images/aa-heroes4.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 8</div>
+          <img src="static/images/aa-heroes5.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 8</div>
+          <img src="static/images/aa-heroes6.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 8</div>
+          <img src="static/images/aa-heroes7.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">8 / 8</div>
+          <img src="static/images/aa-heroes8.jpg" />
+          <div class="text">Anti Air Heroes gameplay</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
     </div>
+  </div>
 
-    
- <div class="mySlides">
-      <div class="numbertext">2 / 8</div>
-      <img src="static/images/aa-heroes2.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
+  <div class="text-column">
+    <h1 id="project-title">Anti Air Heroes</h1>
+    <hr />
+    <p>
+      <span id="highlighted-word"> <strong>Role:</strong></span> Assistant
+      Developer
+    </p>
 
-
-    
- <div class="mySlides">
-      <div class="numbertext">3 / 8</div>
-      <img src="static/images/aa-heroes3.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-
-
-    
- <div class="mySlides">
-      <div class="numbertext">4 / 8</div>
-      <img src="static/images/aa-heroes4.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-
-
-    
- <div class="mySlides">
-      <div class="numbertext">5 / 8</div>
-      <img src="static/images/aa-heroes5.jpg">
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-
-
-    
- <div class="mySlides">
-      <div class="numbertext">6 / 8</div>
-      <img src="static/images/aa-heroes6.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-
-
-    
- <div class="mySlides">
-      <div class="numbertext">7 / 8</div>
-      <img src="static/images/aa-heroes7.jpg" >
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-
-
-    
- <div class="mySlides">
-      <div class="numbertext">8 / 8</div>
-      <img src="static/images/aa-heroes8.jpg">
-      <div class="text">Anti Air Heroes gameplay</div>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>        
-    </div>
-
-
-
- </div>
-
-    <div class="text-column">
-        <h1 id="project-title">Anti Air Heroes</h1>
-        <hr>
-       <p><span id="highlighted-word"> <strong>Role:</strong></span> Assistant Developer</p>
-
-       <p><span id="highlighted-word"> <strong>Description: </strong></span> Anti Air Heroes is a fast-paced, 2D tap-to-shoot mobile game developed for Android. Players are tasked with defending the ground by tapping to shoot down a barrage of falling bombs. With each successful interception, players earn points and push for a new high score. The challenge intensifies as the game continues, and if three bombs manage to hit the ground, the round is over. Points earned during gameplay can be used to unlock a variety of cosmetic items.</p>
-         <ul>
-          <li><span id="highlighted-word"> <strong>Simple & Addictive Gameplay: </strong></span>  An intuitive tap-to-shoot mechanic makes the game easy to pick up and play, perfect for short, engaging sessions.</li>
-          <li><span id="highlighted-word"> <strong>High-Score Chase: </strong> </span> The core objective is to survive as long as possible against the endless onslaught of bombs to achieve the highest score.</li>
-          <li><span id="highlighted-word"> <strong>Unlockable Cosmetics: </strong></span> A point-based reward system allows players to unlock new items and customize their game.</li>
-          <li><span id="highlighted-word"> <strong>Designed for Mobile: </strong></span> Built specifically for the Android platform, offering a classic arcade experience on the go.</li>
-         </ul>
-         <p>In 2018, I had the valuable opportunity to contribute to this indie project as an assistant developer for a brief period. My responsibilities included assisting the lead developer with implementing core gameplay mechanics and refining the user experience. Although my involvement has since concluded, it was a rewarding experience to be part of an indie development team, and I remain a supporter of the project's future success.</p>
-        
-    </div>
-
+    <p>
+      <span id="highlighted-word"> <strong>Description: </strong></span> Anti
+      Air Heroes is a fast-paced, 2D tap-to-shoot mobile game developed for
+      Android. Players are tasked with defending the ground by tapping to shoot
+      down a barrage of falling bombs. With each successful interception,
+      players earn points and push for a new high score. The challenge
+      intensifies as the game continues, and if three bombs manage to hit the
+      ground, the round is over. Points earned during gameplay can be used to
+      unlock a variety of cosmetic items.
+    </p>
+    <ul>
+      <li>
+        <span id="highlighted-word">
+          <strong>Simple & Addictive Gameplay: </strong></span
+        >
+        An intuitive tap-to-shoot mechanic makes the game easy to pick up and
+        play, perfect for short, engaging sessions.
+      </li>
+      <li>
+        <span id="highlighted-word"> <strong>High-Score Chase: </strong> </span>
+        The core objective is to survive as long as possible against the endless
+        onslaught of bombs to achieve the highest score.
+      </li>
+      <li>
+        <span id="highlighted-word">
+          <strong>Unlockable Cosmetics: </strong></span
+        >
+        A point-based reward system allows players to unlock new items and
+        customize their game.
+      </li>
+      <li>
+        <span id="highlighted-word">
+          <strong>Designed for Mobile: </strong></span
+        >
+        Built specifically for the Android platform, offering a classic arcade
+        experience on the go.
+      </li>
+    </ul>
+    <p>
+      In 2018, I had the valuable opportunity to contribute to this indie
+      project as an assistant developer for a brief period. My responsibilities
+      included assisting the lead developer with implementing core gameplay
+      mechanics and refining the user experience. Although my involvement has
+      since concluded, it was a rewarding experience to be part of an indie
+      development team, and I remain a supporter of the project's future
+      success.
+    </p>
+  </div>
 </div>
 
 {% endblock %}
-

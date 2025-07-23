@@ -1,153 +1,263 @@
-{% extends "base.html" %}
-
-{% block title %} Velocity VR {% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %} Velocity VR {% endblock %} {% block
+content %}
 
 <div class="split-layout-container">
-
   <div class="video-column">
+    <div id="preview-viewer" ondblclick="openModalForCurrent()"></div>
 
-      <div id="preview-viewer" ondblclick="openModalForCurrent()">
-            </div>
+    <div class="gallery">
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-banner.jpg"
+        onclick="updatePreview(1)"
+        alt="Velocity VR Banner"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-screenshot.jpg"
+        onclick="updatePreview(2)"
+        alt="Monster Video Thumbnail"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/shottyscreenshot.jpg"
+        onclick="updatePreview(3)"
+        alt="Shotgun Video Thumbnail"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-shotgun2.jpg"
+        onclick="updatePreview(4)"
+        alt="Player with Shotgun"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-shotgun.jpg"
+        onclick="updatePreview(5)"
+        alt="First-person shotgun view"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship.jpg"
+        onclick="updatePreview(6)"
+        alt="Ship corridor"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship2.jpg"
+        onclick="updatePreview(7)"
+        alt="Ship corridor 2"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship3.jpg"
+        onclick="updatePreview(8)"
+        alt="Ship corridor 3"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship4.jpg"
+        onclick="updatePreview(9)"
+        alt="Ship corridor 4"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship5.jpg"
+        onclick="updatePreview(10)"
+        alt="Ship corridor 5"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship6.jpg"
+        onclick="updatePreview(11)"
+        alt="Ship corridor 6"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-ship7.png"
+        onclick="updatePreview(12)"
+        alt="Ship corridor 7"
+      />
+      <img
+        class="thumbnail-img"
+        src="static/images/velocityvr-deathscreen.png"
+        onclick="updatePreview(13)"
+        alt="Game Over Screen"
+      />
+    </div>
 
-        <div class="gallery">
-            <img class="thumbnail-img" src="static/images/velocityvr-banner.jpg" onclick="updatePreview(1)" alt="Velocity VR Banner">
-            <img class="thumbnail-img" src="static/images/velocityvr-screenshot.jpg" onclick="updatePreview(2)" alt="Monster Video Thumbnail">
-            <img class="thumbnail-img" src="static/images/shottyscreenshot.jpg" onclick="updatePreview(3)" alt="Shotgun Video Thumbnail">
-            <img class="thumbnail-img" src="static/images/velocityvr-shotgun2.jpg" onclick="updatePreview(4)" alt="Player with Shotgun">
-            <img class="thumbnail-img" src="static/images/velocityvr-shotgun.jpg" onclick="updatePreview(5)" alt="First-person shotgun view">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship.jpg" onclick="updatePreview(6)" alt="Ship corridor">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship2.jpg" onclick="updatePreview(7)" alt="Ship corridor 2">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship3.jpg" onclick="updatePreview(8)" alt="Ship corridor 3">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship4.jpg" onclick="updatePreview(9)" alt="Ship corridor 4">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship5.jpg" onclick="updatePreview(10)" alt="Ship corridor 5">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship6.jpg" onclick="updatePreview(11)" alt="Ship corridor 6">
-            <img class="thumbnail-img" src="static/images/velocityvr-ship7.png" onclick="updatePreview(12)" alt="Ship corridor 7">
-            <img class="thumbnail-img" src="static/images/velocityvr-deathscreen.png" onclick="updatePreview(13)" alt="Game Over Screen">
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 13</div>
+          <img src="static/images/velocityvr-banner.jpg" style="width: 100%" />
+          <div class="text">Velocity VR banner</div>
         </div>
 
-        <div id="myModal" class="modal">
-          <span class="close cursor" onclick="closeModal()">&times;</span>
-          <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">2 / 13</div>
+          <video
+            controls
+            autoplay
+            style="width: 100%; max-height: 80vh; display: block"
+          >
+            <source
+              src="static/videos/velocityvr-monster.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="text">The alien monster that stalks the player</div>
+        </div>
 
-    <div class="mySlides">
-      <div class="numbertext">1 / 13</div>
-      <img src="static/images/velocityvr-banner.jpg" style="width:100%">
-      <div class="text">Velocity VR banner</div>
-    </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 13</div>
+          <video
+            controls
+            autoplay
+            loop
+            style="width: 100%; max-height: 80vh; display: block"
+          >
+            <source
+              src="static/videos/velocityvr-shotgun.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="text">The players shotgun animations</div>
+        </div>
 
-    <div class="mySlides">
-      <div class="numbertext">2 / 13</div>
-      <video controls autoplay style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/velocityvr-monster.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">The alien monster that stalks the player</div>
-    </div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 13</div>
+          <img
+            src="static/images/velocityvr-shotgun2.jpg"
+            style="width: 100%"
+          />
+          <div class="text">Players Shotgun 1</div>
+        </div>
 
-    <div class="mySlides">
-      <div class="numbertext">3 / 13</div>
-      <video controls autoplay loop style="width:100%; max-height: 80vh; display: block;">
-        <source src="static/videos/velocityvr-shotgun.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="text">The players shotgun animations</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">4 / 13</div>
-      <img src="static/images/velocityvr-shotgun2.jpg" style="width:100%">
-      <div class="text">Players Shotgun 1</div>
-    </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 13</div>
+          <img src="static/images/velocityvr-shotgun.jpg" style="width: 100%" />
+          <div class="text">Players Shotgun 2</div>
+        </div>
 
-    <div class="mySlides">
-      <div class="numbertext">5 / 13</div>
-      <img src="static/images/velocityvr-shotgun.jpg" style="width:100%">
-      <div class="text">Players Shotgun 2</div>
-    </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 13</div>
+          <img src="static/images/velocityvr-ship.jpg" style="width: 100%" />
+          <div class="text">Ship Corridors 1</div>
+        </div>
 
-    <div class="mySlides">
-      <div class="numbertext">6 / 13</div>
-      <img src="static/images/velocityvr-ship.jpg" style="width:100%">
-      <div class="text">Ship Corridors 1</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">7 / 13</div>
-      <img src="static/images/velocityvr-ship2.jpg" style="width:100%">
-      <div class="text">Ship Corridors 2</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">8 / 13</div>
-      <img src="static/images/velocityvr-ship3.jpg" style="width:100%">
-      <div class="text">Navigation Deck</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">9 / 13</div>
-      <img src="static/images/velocityvr-ship4.jpg" style="width:100%">
-      <div class="text">Infirmary Bay 1</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">10 / 13</div>
-      <img src="static/images/velocityvr-ship5.jpg" style="width:100%">
-      <div class="text">Infirmary Bay 2</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">11 / 13</div>
-      <img src="static/images/velocityvr-ship6.jpg" style="width:100%">
-      <div class="text">Alien stalking the Corridors</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">12 / 13</div>
-      <img src="static/images/velocityvr-ship7.png" style="width:100%">
-      <div class="text"></div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">13 / 13</div>
-      <img src="static/images/velocityvr-deathscreen.png" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="mySlides">
+          <div class="numbertext">7 / 13</div>
+          <img src="static/images/velocityvr-ship2.jpg" style="width: 100%" />
+          <div class="text">Ship Corridors 2</div>
+        </div>
 
+        <div class="mySlides">
+          <div class="numbertext">8 / 13</div>
+          <img src="static/images/velocityvr-ship3.jpg" style="width: 100%" />
+          <div class="text">Navigation Deck</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">9 / 13</div>
+          <img src="static/images/velocityvr-ship4.jpg" style="width: 100%" />
+          <div class="text">Infirmary Bay 1</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">10 / 13</div>
+          <img src="static/images/velocityvr-ship5.jpg" style="width: 100%" />
+          <div class="text">Infirmary Bay 2</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">11 / 13</div>
+          <img src="static/images/velocityvr-ship6.jpg" style="width: 100%" />
+          <div class="text">Alien stalking the Corridors</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">12 / 13</div>
+          <img src="static/images/velocityvr-ship7.png" style="width: 100%" />
+          <div class="text"></div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">13 / 13</div>
+          <img
+            src="static/images/velocityvr-deathscreen.png"
+            style="width: 100%"
+          />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
   </div>
+
+  <div class="text-column">
+    <h1 id="project-title">Velocity VR</h1>
+    <hr />
+
+    <p>
+      <span id="highlighted-word"><strong>Role: </strong></span> Project Lead &
+      Designer
+    </p>
+    <p>
+      <span id="highlighted-word"><strong>Description: </strong></span>Velocity
+      VR is a survival horror game that immerses players in the chilling
+      atmosphere of an abandoned colony spacecraft. Uniquely, players are
+      confined to a wheelchair, forcing them to rely on strategy and stealth to
+      navigate the ship and escape. The primary obstacle is a single,
+      intelligent, and hostile extraterrestrial AI that relentlessly hunts the
+      player, creating a tense and deeply personal horror experience. This game
+      was developed over a 14-week cycle as a core project for my AIE Design
+      course.
+    </p>
+    <ul>
+      <li>
+        <span id="highlighted-word"
+          ><strong>Immersive VR Horror: </strong></span
+        >
+        Built from the ground up for virtual reality to maximize immersion and
+        suspense.
+      </li>
+      <li>
+        <span id="highlighted-word"><strong>Unique Locomotion: </strong></span
+        >The wheelchair-bound mechanic creates a distinct and challenging
+        gameplay experience, focusing on vulnerability and careful navigation
+        rather than direct combat.
+      </li>
+      <li>
+        <span id="highlighted-word"><strong>Advanced Enemy AI: </strong> </span>
+        Players are stalked by a single, sophisticated enemy that learns and
+        adapts, ensuring no two playthroughs are the same.
+      </li>
+      <li>
+        <span id="highlighted-word"
+          ><strong>Atmospheric Storytelling: </strong></span
+        >
+        The abandoned spacecraft serves as a desolate, narrative-rich
+        environment that players must explore to uncover the story and find a
+        path to escape.
+      </li>
+    </ul>
+    <p>
+      As the Project Lead, I guided a team of five students (three programmers,
+      two artists) through their first VR development experience. My
+      responsibilities included defining the project vision, managing the
+      development scope to fit our 14-week timeline, facilitating communication
+      between disciplines, and ensuring we delivered a polished final product.
+      Leading this talented team to create a successful and compelling game was
+      a highlight of my time at AIE and a testament to our effective
+      collaboration and rapid skill acquisition.
+    </p>
   </div>
 </div>
-
-<div class="text-column">
-        <h1 id="project-title">Velocity VR</h1>
-        <hr>
-
-        <p><span id="highlighted-word"><strong>Role: </strong></span> Project Lead & Designer</p>
-        <p><span id="highlighted-word"><strong>Description: </strong></span>Velocity VR is a survival horror game that immerses players in the chilling atmosphere of an abandoned colony spacecraft. Uniquely, players are confined to a wheelchair, forcing them to rely on strategy and stealth to navigate the ship and escape. The primary obstacle is a single, intelligent, and hostile extraterrestrial AI that relentlessly hunts the player, creating a tense and deeply personal horror experience. This game was developed over a 14-week cycle as a core project for my AIE Design course.</p>
-        <ul>
-        <li><span id="highlighted-word"><strong>Immersive VR Horror: </strong></span> Built from the ground up for virtual reality to maximize immersion and suspense.</li>
-        <li><span id="highlighted-word"><strong>Unique Locomotion: </strong></span>The wheelchair-bound mechanic creates a distinct and challenging gameplay experience, focusing on vulnerability and careful navigation rather than direct combat.</li>
-        <li><span id="highlighted-word"><strong>Advanced Enemy AI: </strong> </span> Players are stalked by a single, sophisticated enemy that learns and adapts, ensuring no two playthroughs are the same.</li>
-        <li><span id="highlighted-word"><strong>Atmospheric Storytelling: </strong></span> The abandoned spacecraft serves as a desolate, narrative-rich environment that players must explore to uncover the story and find a path to escape.</li>
-        </ul>
-        <p>As the Project Lead, I guided a team of five students (three programmers, two artists) through their first VR development experience. My responsibilities included defining the project vision, managing the development scope to fit our 14-week timeline, facilitating communication between disciplines, and ensuring we delivered a polished final product. Leading this talented team to create a successful and compelling game was a highlight of my time at AIE and a testament to our effective collaboration and rapid skill acquisition.</p>
-        
-    </div>
-
-
-
-</div>
-
-
-
-
-
 
 {% endblock %}
-
-
-
